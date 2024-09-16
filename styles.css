@@ -1,0 +1,141 @@
+/* styles.css */
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container styles */
+.container {
+    margin-top: 30px;
+    max-width: 1200px;
+}
+
+/* Definition styles (may need adjustment) */
+.definition {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 10px 0;
+}
+
+.definition h3 {
+    color: #6e45e2;
+}
+
+/* Cell styles for modals */
+.cell {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.cell h4 {
+    color: #003366;
+}
+
+
+
+.cell p {
+    color: #666;
+}
+
+.cell button {
+    margin-top: 10px;
+    background-color: #0056b3;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.cell button:hover {
+    background-color: #003d80;
+}
+
+/* Button styles */
+.btn-back {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #f50057;
+}
+
+/* Modal styles */
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Heading styles */
+h1 {
+    color: #ff4081;
+}
+
+h2 {
+    color: #ff4081;
+}
+
+h3 {
+    color: #ff4081;
+}
+
+h4 {
+    color: #003366;
+}
+
+h5 {
+    color: #004d00; /* Dark green for visibility */
+    font-weight: 600; /* Slightly bold for emphasis */
+    background-color: #e8f5e9; /* Light green background */
+    padding: 10px; /* Add padding */
+    border-left: 4px solid #004d00; /* Left border for added emphasis */
+    margin-top: 20px; /* Add margin for spacing */
+    margin-bottom: 10px; /* Add margin for spacing */
+}
+
+/* Horizontal line styling */
+hr {
+    border: 0;
+    border-top: 2px solid #e0e0e0;
+    margin: 30px 0;
+}

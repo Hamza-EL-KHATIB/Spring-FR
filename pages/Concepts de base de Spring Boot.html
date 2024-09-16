@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepts de base de Spring Boot</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+    <h1>Concepts de base de Spring Boot</h1>
+</header>
+
+<div class="container">
+    <!-- Back Button -->
+    <a href="../Homepage.html" class="btn btn-back">Retour à la page d'accueil</a>
+
+    <h2>Résumé</h2>
+    <ul>
+        <li><strong>IoC</strong>: est un concept général.
+        </li>
+        <li><strong>Injection de dépendances</strong>: est une implémentation spécifique de IoC.
+        </li>
+        <li><strong>Conteneur Spring IoC</strong>: est un outil pour implémenter IoC et DI.
+        </li>
+        <li><strong>Principe d’inversion des dépendances</strong>: est une directive de conception pour mieux atteindre
+            IoC.
+        </li>
+    </ul>
+
+    <h4>Analogie</h4>
+    <p>Imaginez construire une voiture.</p>
+    <ul>
+        <li><strong>IoC</strong>: Au lieu de construire la voiture entière vous-même, vous achetez des pièces auprès de
+            différents fabricants et les assemblez.
+        </li>
+        <li><strong>Injection de dépendances</strong>: Les pièces de la voiture (comme le moteur, les pneus et le
+            volant) vous sont fournies (injectées) pour construire la voiture.
+        </li>
+        <li><strong>Conteneur Spring IoC</strong>: Une usine qui assemble la voiture en utilisant différentes pièces.
+        </li>
+        <li><strong>Principe d’inversion des dépendances</strong>: Concevoir la voiture de manière à pouvoir facilement
+            remplacer des pièces (comme en utilisant des tailles de boulons standard).
+        </li>
+    </ul>
+
+    <h4>Concepts de base</h4>
+    <ul>
+        <li><strong>Inversion de contrôle (IoC)</strong>: Un principe de conception général où le flux de contrôle d’un
+            programme est inversé. Au lieu que votre code contrôle le flux, un conteneur ou un framework prend le
+            relais.
+        </li>
+        <li><strong>Injection de dépendances (DI)</strong>: Une implémentation spécifique de IoC où des objets
+            (dépendances) sont fournis à une classe au lieu qu’elle les crée elle-même.
+        </li>
+    </ul>
+
+    <h4>Implémentations spécifiques</h4>
+    <ul>
+        <li><strong>Conteneur Spring IoC</strong>: Une implémentation concrète d’un conteneur IoC fourni par Spring, qui
+            gère le cycle de vie des objets (beans) et leurs dépendances.
+        </li>
+        <li><strong>Principe d’inversion des dépendances (DIP)</strong>: Un principe de conception suggérant de dépendre
+            d’abstractions plutôt que de concrétions, rendant le code plus flexible et maintenable.
+        </li>
+    </ul>
+
+    <h2><strong>Explication</strong></h2>
+
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5><strong>Inversion de contrôle (IoC)</strong></h5>
+                    <ul>
+                        <li><strong>Idée principale :</strong> IoC est un principe de conception général qui préconise
+                            de transférer le contrôle de la création, de la configuration et de la gestion des objets
+                            d’une application à une entité externe. Cette “entité externe” peut être un framework, un
+                            conteneur ou même un morceau de code spécifique.
+                        </li>
+                        <li><strong>Objectif :</strong> Promouvoir un couplage lâche entre les composants, rendant le
+                            système plus flexible, modulaire et plus facile à maintenir. En découplant les composants
+                            les uns des autres, vous réduisez les dépendances, ce qui vous permet de modifier ou de
+                            remplacer des parties du système sans affecter le reste.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5><strong>Conteneur Spring IoC</strong></h5>
+                    <ul>
+                        <li><strong>Implémentation du framework :</strong> Le conteneur Spring IoC est une
+                            implémentation puissante des concepts de IoC et DI au sein du framework Spring. Il gère le
+                            cycle de vie des objets (beans) dans votre application, s’occupe de l’injection de
+                            dépendances et fournit divers services tels que la gestion de la configuration et la
+                            programmation orientée aspect.
+                        </li>
+                        <li><strong>Caractéristiques clés :</strong>
+                            <ul>
+                                <li><strong>Configuration des beans :</strong> Vous définissez vos beans (objets) et
+                                    leurs dépendances dans des fichiers de configuration ou via des annotations.
+                                </li>
+                                <li><strong>Résolution des dépendances :</strong> Le conteneur résout automatiquement
+                                    les dépendances entre les beans et les injecte à l’exécution.
+                                </li>
+                                <li><strong>Gestion du cycle de vie :</strong> Le conteneur gère la création,
+                                    l’initialisation et la destruction des beans.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5><strong>Injection de dépendances</strong></h5>
+                    <ul>
+                        <li><strong>Implémentation de IoC :</strong> L’injection de dépendances (DI) est une technique
+                            spécifique pour implémenter IoC. Elle consiste à fournir des dépendances (objets ou valeurs)
+                            à un composant de l’extérieur, plutôt que de laisser le composant les créer ou les obtenir
+                            lui-même.
+                        </li>
+                        <li><strong>Types de DI :</strong> Il existe trois principaux types de DI :
+                            <ul>
+                                <li><strong>Injection par constructeur :</strong> Les dépendances sont passées en tant
+                                    qu’arguments au constructeur d’une classe.
+                                </li>
+                                <li><strong>Injection par setter :</strong> Les dépendances sont fournies via des
+                                    méthodes setter.
+                                </li>
+                                <li><strong>Injection par interface :</strong> Les dépendances sont injectées via des
+                                    interfaces.
+                                </li>
+                                <li>Injection par champ.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Avantages :</strong> La DI rend le code plus testable, plus réutilisable et plus
+                            maintenable.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5><strong>Dependency Inversion Principle (DIP)</strong></h5>
+                    <p>DIP est un principe de conception qui vous encourage à dépendre d'abstractions (interfaces ou
+                        classes abstraites) plutôt que d'implémentations concrètes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- General Overview Diagram -->
+    <h2>Vue d'ensemble générale</h2>
+    <div class="definition">
+        <h5>Définitions</h5>
+        <ul>
+            <li><strong>BeanFactory:</strong> Interface pour accéder aux beans avec des fonctionnalités de base.</li>
+            <li><strong>ApplicationContext:</strong> Étend BeanFactory avec des fonctionnalités supplémentaires comme la propagation des événements et l'internationalisation.</li>
+            <li><strong>BeanDefinition:</strong> Contient des métadonnées sur un bean, telles que son type de classe et son scope.</li>
+            <li><strong>BeanFactoryPostProcessor:</strong> Modifie les définitions de bean avant l'instanciation des beans.</li>
+            <li><strong>BeanPostProcessor:</strong> Permet la modification des beans après l'instanciation et avant leur utilisation.</li>
+            <li><strong>PropertyPlaceholderConfigurer:</strong> Résout les espaces réservés dans les valeurs de propriétés de bean à partir de fichiers de propriétés externes.</li>
+            <li><strong>Resource:</strong> Représente une abstraction pour l'accès aux ressources externes.</li>
+            <li><strong>Environment:</strong> Fournit l'accès aux propriétés spécifiques à l'environnement.</li>
+            <li><strong>FactoryBean:</strong> Renvoie différents objets à partir de son propre instance, utile pour créer des objets complexes.</li>
+            <li><strong>PropertyEditor:</strong> Convertit les chaînes de caractères en objets pour la configuration des beans.</li>
+            <li><strong>Scopes des Beans Spring:</strong> Définit le cycle de vie et la visibilité des beans (Singleton, Prototype, Request, Session).</li>
+        </ul>
+    </div>
+    <div class="mermaid">
+        %%{init: {"theme": "base", "themeVariables": {
+        "primaryColor": "#007bff",
+        "secondaryColor": "#28a745",
+        "tertiaryColor": "#ffc107",
+        "primaryTextColor": "#333",
+        "lineColor": "#343a40",
+        "edgeLabelBackground": "#f0f4f8",
+        "tertiaryTextColor": "#333",
+        "nodePadding": "15px", /* Increase padding */
+        "nodeBorderRadius": "10px", /* Rounded corners for nodes */
+        "fontFamily": "'Roboto', sans-serif", /* Clear font */
+        "fontSize": "16px", /* Larger font size */
+        "nodeBorderColor": "#343a40" /* Border color for nodes */
+        }}}%%
+        flowchart-elk
+        style BeanFactory fill:#007bff,stroke:#343a40,stroke-width:2px
+        style ApplicationContext fill:#28a745,stroke:#343a40,stroke-width:2px
+        style BeanDefinition fill:#ffc107,stroke:#343a40,stroke-width:2px
+        style BeanFactoryPostProcessor fill:#17a2b8,stroke:#343a40,stroke-width:2px
+        style BeanPostProcessor fill:#dc3545,stroke:#343a40,stroke-width:2px
+        style PropertyPlaceholderConfigurer fill:#e2e6ea,stroke:#343a40,stroke-width:2px
+        style Resource fill:#007bff,stroke:#343a40,stroke-width:2px
+        style Environment fill:#28a745,stroke:#343a40,stroke-width:2px
+        style FactoryBean fill:#ffc107,stroke:#343a40,stroke-width:2px
+        style PropertyEditor fill:#17a2b8,stroke:#343a40,stroke-width:2px
+        style SpringBeanScopes fill:#dc3545,stroke:#343a40,stroke-width:2px
+
+        BeanFactory -->|Fournit des beans| ApplicationContext
+        ApplicationContext -->|Utilise les définitions de beans\net gère les beans| BeanDefinition
+        ApplicationContext -->|Modifie les beans| BeanPostProcessor
+        ApplicationContext -->|Modifie les définitions de beans| BeanFactoryPostProcessor
+        ApplicationContext -->|Résout les espaces réservés des propriétés| PropertyPlaceholderConfigurer
+        ApplicationContext -->|Accède aux ressources| Resource
+        ApplicationContext -->|Fournit des propriétés d'environnement| Environment
+        ApplicationContext -->|Crée des beans avec une logique spéciale| FactoryBean
+        ApplicationContext -->|Convertit les valeurs des propriétés des beans| PropertyEditor
+        ApplicationContext -->|Définit les portées du cycle de vie des beans| SpringBeanScopes
+        BeanDefinition -->|Portées définies| SpringBeanScopes
+        SpringBeanScopes -->|Singleton : Une seule instance| Singleton
+        SpringBeanScopes -->|Prototype : Nouvelle instance par demande| Prototype
+        SpringBeanScopes -->|Request : Nouvelle instance par requête HTTP| Request
+        SpringBeanScopes -->|Session : Nouvelle instance par session HTTP| Session
+    </div>
+
+    <!-- Detailed Diagrams -->
+    <h2>Diagrammes détaillés</h2>
+    <!-- Bean Lifecycle Diagram -->
+    <div class="definition">
+        <h5>Cycle de Vie des Beans</h5>
+        <ul>
+            <li><strong>Création du Bean:</strong> Création initiale de l'instance du bean.</li>
+            <li><strong>Initialisation:</strong> Configuration et préparation du bean.</li>
+            <li><strong>BeanPostProcessor:</strong> Modifications après la création du bean mais avant son utilisation.</li>
+            <li><strong>Destruction:</strong> Nettoyage avant la destruction du bean.</li>
+        </ul>
+    </div>
+    <div class="mermaid">
+        %%{init: {"theme": "base", "themeVariables": {
+        "primaryColor": "#007bff",
+        "secondaryColor": "#28a745",
+        "tertiaryColor": "#ffc107",
+        "primaryTextColor": "#333",
+        "lineColor": "#343a40",
+        "edgeLabelBackground": "#f0f4f8",
+        "tertiaryTextColor": "#333",
+        "nodePadding": "15px", /* Increase padding */
+        "nodeBorderRadius": "10px", /* Rounded corners for nodes */
+        "fontFamily": "'Roboto', sans-serif", /* Clear font */
+        "fontSize": "16px", /* Larger font size */
+        "nodeBorderColor": "#343a40" /* Border color for nodes */
+        }}}%%
+        flowchart-elk
+        style BeanCreation fill:#007bff,stroke:#343a40,stroke-width:2px
+        style Initialization fill:#28a745,stroke:#343a40,stroke-width:2px
+        style BeanPostProcessor fill:#ffc107,stroke:#343a40,stroke-width:2px
+        style Destruction fill:#dc3545,stroke:#343a40,stroke-width:2px
+
+        BeanCreation -->|Création initiale de l'instance du bean| Initialization
+        Initialization -->|Configuration et préparation| BeanPostProcessor
+        BeanPostProcessor -->|Modifications avant utilisation| Destruction
+    </div>
+    <!-- Scope Types Diagram -->
+    <div class="definition">
+        <h5>Spring Bean Scopes (Portées des Beans Spring)</h5>
+        <ul>
+            <li><strong>Singleton :</strong> Une seule instance du bean est créée pour l'ensemble du conteneur Spring.</li>
+            <li><strong>Prototype :</strong> Une nouvelle instance du bean est créée chaque fois qu'elle est demandée.</li>
+            <li><strong>Request :</strong> Une nouvelle instance est créée pour chaque requête HTTP.</li>
+            <li><strong>Session :</strong> Une nouvelle instance est créée pour chaque session HTTP.</li>
+        </ul>
+    </div>
+    <div class="mermaid">
+        %%{init: {"theme": "base", "themeVariables": {
+        "primaryColor": "#007bff",
+        "secondaryColor": "#28a745",
+        "tertiaryColor": "#ffc107",
+        "primaryTextColor": "#333",
+        "lineColor": "#343a40",
+        "edgeLabelBackground": "#f0f4f8",
+        "tertiaryTextColor": "#333",
+        "nodePadding": "15px", /* Increase padding */
+        "nodeBorderRadius": "10px", /* Rounded corners for nodes */
+        "fontFamily": "'Roboto', sans-serif", /* Clear font */
+        "fontSize": "16px", /* Larger font size */
+        "nodeBorderColor": "#343a40" /* Border color for nodes */
+        }}}%%
+        flowchart-elk
+        style Singleton fill:#007bff,stroke:#343a40,stroke-width:2px
+        style Prototype fill:#28a745,stroke:#343a40,stroke-width:2px
+        style Request fill:#ffc107,stroke:#343a40,stroke-width:2px
+        style Session fill:#dc3545,stroke:#343a40,stroke-width:2px
+
+        SpringBeanScopes -->|Singleton: Une instance pour l'application| Singleton
+        SpringBeanScopes -->|Prototype: Nouvelle instance à chaque demande| Prototype
+        SpringBeanScopes -->|Request: Nouvelle instance par requête HTTP| Request
+        SpringBeanScopes -->|Session: Nouvelle instance par session HTTP| Session
+    </div>
+
+    <h2>Composants Supplémentaires</h2>
+    <div class="definition">
+        <h5>Définitions</h5>
+        <ul>
+            <li><strong>ApplicationEventPublisher :</strong> Interface pour publier des événements aux beans qui sont intéressés.</li>
+            <li><strong>ContextRefreshedEvent :</strong> Événement publié lorsque l'ApplicationContext est initialisé ou rafraîchi.</li>
+            <li><strong>ContextClosedEvent :</strong> Événement publié lorsque l'ApplicationContext est fermé.</li>
+            <li><strong>MessageSource :</strong> Fournit un support pour l'internationalisation des messages.</li>
+            <li><strong>AOP (Programmation Orientée Aspect) :</strong> Inclut les aspects, les conseils, les points de jointure et les pointcuts.</li>
+            <li><strong>EventListener :</strong> Interface pour écouter les événements de l'application.</li>
+            <li><strong>AnnotationConfigApplicationContext :</strong> Une sous-classe de ApplicationContext qui permet la configuration à l'aide d'annotations.</li>
+        </ul>
+    </div>
+    <div class="mermaid">
+        %%{init: {"theme": "base", "themeVariables": {
+        "primaryColor": "#007bff",
+        "secondaryColor": "#28a745",
+        "tertiaryColor": "#ffc107",
+        "primaryTextColor": "#333",
+        "lineColor": "#343a40",
+        "edgeLabelBackground": "#f0f4f8",
+        "tertiaryTextColor": "#333",
+        "nodePadding": "15px",
+        "nodeBorderRadius": "10px",
+        "fontFamily": "'Roboto', sans-serif",
+        "fontSize": "16px",
+        "nodeBorderColor": "#343a40"
+        }}}%%
+        flowchart-elk
+        style ApplicationEventPublisher fill:#6c757d,stroke:#343a40,stroke-width:2px
+        style ContextRefreshedEvent fill:#17a2b8,stroke:#343a40,stroke-width:2px
+        style ContextClosedEvent fill:#dc3545,stroke:#343a40,stroke-width:2px
+        style MessageSource fill:#007bff,stroke:#343a40,stroke-width:2px
+        style AOP fill:#28a745,stroke:#343a40,stroke-width:2px
+        style EventListener fill:#ffc107,stroke:#343a40,stroke-width:2px
+        style AnnotationConfigApplicationContext fill:#17a2b8,stroke:#343a40,stroke-width:2px
+
+        ApplicationContext -->|Publie des événements| ApplicationEventPublisher
+        ApplicationEventPublisher -->|Événement de contexte rafraîchi| ContextRefreshedEvent
+        ApplicationEventPublisher -->|Événement de contexte fermé| ContextClosedEvent
+        ApplicationContext -->|Fournit un support pour l'internationalisation| MessageSource
+        ApplicationContext -->|Utilise AOP| AOP
+        AOP -->|Définit des conseils| Aspect
+        ApplicationContext -->|Écoute les événements de l'application| EventListener
+        ApplicationContext -->|Utilise la configuration basée sur des annotations| AnnotationConfigApplicationContext
+
+    </div>
+
+</div>
+
+<footer>
+    <p>Diagrammes du Conteneur de Base Spring &copy; 2024</p>
+</footer>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Mermaid JS -->
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({startOnLoad:true});
+</script>
+</body>
+</html>

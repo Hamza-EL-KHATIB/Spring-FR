@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrammes détaillés et FAQ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+    <h1>Composants du conteneur de base Spring</h1>
+</header>
+
+<div class="container">
+    <!-- Back Button -->
+    <a href="../Homepage.html" class="btn btn-back">Retour à la page d'accueil</a>
+    <!-- Additional Questions -->
+    <h2>Questions supplémentaires à prévoir</h2>
+    <div class="definition">
+        <h5>Questions supplémentaires</h5>
+        <ul>
+            <li><strong>Injection de dépendances :</strong>
+                <p>L'injection de dépendances (DI) est un modèle de conception qui permet de créer des objets dépendants en dehors d'une classe et de fournir ces objets à une classe par divers moyens. Spring supporte trois types principaux d'injection de dépendances :</p>
+                <ul>
+                    <li><strong>Injection par constructeur :</strong> Les dépendances sont fournies via le constructeur de la classe.</li>
+                    <li><strong>Injection par setter :</strong> Les dépendances sont définies via des méthodes setter après la construction de l'objet.</li>
+                    <li><strong>Injection par champ :</strong> Les dépendances sont injectées directement dans les champs (moins préféré en raison des problèmes de test et d'encapsulation).</li>
+                </ul>
+                <p>Spring gère ces injections à l'aide d'annotations telles que <code>@Autowired</code>, <code>@Inject</code> et <code>@Resource</code>.</p>
+            </li>
+            <li><strong>Dépendances circulaires :</strong>
+                <p>Spring gère les dépendances circulaires en utilisant une technique appelée "injection par setter" ou en créant un proxy si les dépendances sont mutuellement dépendantes. Pour l'injection par constructeur, Spring peut ne pas être capable de résoudre les dépendances circulaires et lancer une exception.</p>
+            </li>
+            <li><strong>Initialisation paresseuse :</strong>
+                <p>L'initialisation paresseuse est une stratégie où la création des beans est différée jusqu'à ce qu'ils soient nécessaires. Cela peut améliorer le temps de démarrage et réduire la consommation de mémoire. Spring supporte l'initialisation paresseuse en utilisant l'annotation <code>@Lazy</code> ou en configurant les beans dans le fichier XML de contexte.</p>
+            </li>
+            <li><strong>Spring Expression Language (SpEL) :</strong>
+                <p>SpEL est un langage d'expression puissant dans Spring qui permet d'interroger et de manipuler des objets à l'exécution. Il peut être utilisé dans les définitions de beans pour définir des propriétés, appeler des méthodes et effectuer des opérations dynamiques.</p>
+            </li>
+            <li><strong>Comparaison avec d'autres conteneurs IoC :</strong>
+                <p>Le conteneur IoC de Spring offre plusieurs avantages par rapport à d'autres comme Guice :</p>
+                <ul>
+                    <li><strong>Fonctionnalités complètes :</strong> Spring fournit un large éventail de fonctionnalités incluant la gestion des transactions, AOP, et l'intégration avec d'autres technologies.</li>
+                    <li><strong>Flexibilité :</strong> Spring offre plus d'options de configuration flexibles (XML, annotations, configuration Java).</li>
+                    <li><strong>Support communautaire :</strong> Une communauté plus large et une documentation étendue aident à résoudre les problèmes et à étendre les fonctionnalités.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Potential Interview Questions -->
+    <h2>Questions potentielles pour les entretiens basées sur votre résumé</h2>
+    <div class="definition">
+        <h5>Questions potentielles pour les entretiens</h5>
+        <ul>
+            <li><strong>Pouvez-vous expliquer la différence entre un BeanFactory et un ApplicationContext ?</strong>
+                <p>Un <strong>BeanFactory</strong> est un conteneur de base fournissant les fonctionnalités fondamentales pour la gestion des beans, tandis qu'un <strong>ApplicationContext</strong> est un conteneur plus avancé qui inclut des fonctionnalités supplémentaires telles que la propagation d'événements, les mécanismes déclaratifs et l'intégration avec d'autres frameworks.</p>
+            </li>
+            <li><strong>Comment Spring gère-t-il le cycle de vie d'un bean ?</strong>
+                <p>Spring gère le cycle de vie des beans via des callbacks d'initialisation et de destruction, qui incluent des méthodes comme <code>init-method</code> et <code>destroy-method</code>, ainsi que des interfaces comme <code>InitializingBean</code> et <code>DisposableBean</code>.</p>
+            </li>
+            <li><strong>Quelles sont les différentes portées de beans disponibles dans Spring ?</strong>
+                <p>Spring supporte plusieurs portées de beans :</p>
+                <ul>
+                    <li><strong>Singleton :</strong> Une seule instance du bean est créée pour l'ensemble du conteneur Spring.</li>
+                    <li><strong>Prototype :</strong> Une nouvelle instance du bean est créée à chaque fois qu'elle est demandée.</li>
+                    <li><strong>Request :</strong> Une nouvelle instance est créée pour chaque requête HTTP.</li>
+                    <li><strong>Session :</strong> Une nouvelle instance est créée pour chaque session HTTP.</li>
+                </ul>
+            </li>
+            <li><strong>Quand utiliseriez-vous un BeanPostProcessor ?</strong>
+                <p>Un <strong>BeanPostProcessor</strong> est utilisé pour modifier ou améliorer les beans après qu'ils ont été initialisés mais avant qu'ils ne soient utilisés. Cela peut être utile pour ajouter des comportements personnalisés ou modifier les propriétés des beans de manière dynamique.</p>
+            </li>
+            <li><strong>Comment pouvez-vous personnaliser le comportement d'un bean à l'aide d'un BeanFactoryPostProcessor ?</strong>
+                <p>Un <strong>BeanFactoryPostProcessor</strong> vous permet de modifier les définitions des beans dans le conteneur Spring avant que les beans ne soient instanciés. Cela peut être utilisé pour changer les propriétés des beans ou modifier la configuration de la fabrique de beans.</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>Spring Core Container - Diagrammes détaillés et FAQ &copy; 2024. Tous droits réservés.</p>
+</footer>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

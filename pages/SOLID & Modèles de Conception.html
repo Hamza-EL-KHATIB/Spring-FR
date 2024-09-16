@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLID & Modèles de Conception</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+<header>
+    <h1>SOLID & Modèles de Conception</h1>
+</header>
+
+<div class="container">
+    <!-- Back Button -->
+    <a href="../Homepage.html" class="btn btn-back">Retour à la page d'accueil</a>
+
+    <!-- Section: SOLID Principles -->
+    <div class="section">
+        <h2>SOLID : <strong>Principes de Conception Orientée Objet</strong></h2>
+
+        <h5>Principe de Responsabilité Unique</h5>
+        <p>
+            - La classe fournit une fonctionnalité ciblée ou répond à un souci spécifique concernant une fonctionnalité.<br>
+            - Ce principe stipule qu'une classe ne doit avoir qu'une seule raison de changer.<br>
+            - Le principe de responsabilité unique indique que si nous avons plusieurs responsabilités, chacune doit
+            avoir sa propre classe afin que, en cas de changement, notre code puisse être modifié de manière organisée.
+        </p>
+
+        <h5>Principe Ouvert/Fermé</h5>
+        <p>
+            - "Ouvert" dans le Principe Ouvert/Fermé signifie que les classes sont ouvertes à l'héritage et que les
+            méthodes peuvent être surchargées, tandis que "fermé" signifie que les classes de base existantes ne doivent
+            pas être modifiées.
+        </p>
+        <hr>
+
+        <h5>Principe de Substitution de Liskov</h5>
+        <p>
+            - Nous devons pouvoir substituer des objets de la classe de base par des objets de la classe enfant, et
+            cette substitution ne doit pas altérer le comportement ou les caractéristiques du programme.<br>
+            - Le principe de substitution de Liskov est violé lorsque la classe enfant modifie complètement le
+            comportement ou le contrat de la méthode de la classe de base en la surchargeant.
+        </p>
+
+        <h5>Principe de Ségrégation des Interfaces</h5>
+        <p>
+            - Créez des interfaces spécifiques au client et bien définies. Les clients ne doivent pas être contraints
+            d'implémenter des interfaces qu'ils n'utilisent pas.<br>
+            - Il consiste à diviser les interfaces plus grandes avec des méthodes non liées en elles en interfaces plus
+            petites et hautement cohésives.<br>
+            - Ce principe plaide pour la création d'interfaces plus petites et plus ciblées plutôt que des interfaces
+            larges et monolithiques.<br>
+            Évitez la pollution des interfaces.
+        </p>
+        <hr>
+
+        <h5>Principe d’Inversion des Dépendances</h5>
+        <p>
+            - Les modules de haut niveau ne doivent pas dépendre des modules de bas niveau. Tous deux doivent dépendre
+            d'abstractions.<br>
+            - Les abstractions ne doivent pas dépendre des détails. Les détails doivent dépendre des abstractions.<br>
+            - Cela signifie que le code ne doit pas créer lui-même des objets de toutes ses dépendances. Les dépendances
+            doivent être fournies au code depuis l'extérieur.<br>
+            - Il s'agit de la stratégie de dépendance sur des interfaces et des méthodes et classes abstraites plutôt
+            que sur des classes et méthodes concrètes.
+        </p>
+    </div>
+
+    <!-- Section: Design Patterns -->
+    <h2><strong>Design Patterns</strong></h2>
+
+    <!-- Creational Patterns Section -->
+    <div class="container">
+        <h3>Creational Patterns</h3>
+        <div id="creationalPatterns" class="row">
+            <!-- Singleton Pattern -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Singleton</strong></h4>
+                    <p>Ensures a class has only one instance and provides a global point of access to it (e.g., logging system).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#singletonModal">Voir plus</button>
+                </div>
+            </div>
+
+            <!-- Factory Method Pattern -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Factory Method</strong></h4>
+                    <p>Defines an interface for creating an object but lets subclasses decide which class to instantiate (e.g., shape factory).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#factoryMethodModal">Voir plus</button>
+                </div>
+            </div>
+
+            <!-- Abstract Factory Pattern -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Abstract Factory</strong></h4>
+                    <p>Provides an interface for creating families of related or dependent objects without specifying their concrete classes (e.g., GUI toolkit).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#abstractFactoryModal">Voir plus</button>
+                </div>
+            </div>
+
+            <!-- Builder Pattern -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Builder</strong></h4>
+                    <p>Separates the construction of a complex object from its representation, allowing the same construction process to create various representations (e.g., pizza customization).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#builderModal">Voir plus</button>
+                </div>
+            </div>
+
+            <!-- Prototype Pattern -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Prototype</strong></h4>
+                    <p>Creates new objects by copying existing objects (prototypes) (e.g., cell replication).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#prototypeModal">Voir plus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for each pattern -->
+    <!-- Singleton Modal -->
+    <div class="modal fade" id="singletonModal" tabindex="-1" role="dialog" aria-labelledby="singletonModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="singletonModalLabel">Singleton Pattern</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ensures a class has only one instance and provides a global point of access to it (e.g., logging system).</p>
+                    <img src="img/Singleton.png" class="img-fluid" alt="Singleton Pattern">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Factory Method Modal -->
+    <div class="modal fade" id="factoryMethodModal" tabindex="-1" role="dialog" aria-labelledby="factoryMethodModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="factoryMethodModalLabel">Factory Method Pattern</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Defines an interface for creating an object but lets subclasses decide which class to instantiate (e.g., shape factory).</p>
+                    <img src="../img/Factory%20Method.png" class="img-fluid" alt="Factory Method Pattern">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Abstract Factory Modal -->
+    <div class="modal fade" id="abstractFactoryModal" tabindex="-1" role="dialog" aria-labelledby="abstractFactoryModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="abstractFactoryModalLabel">Abstract Factory Pattern</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Provides an interface for creating families of related or dependent objects without specifying their concrete classes (e.g., GUI toolkit).</p>
+                    <img src="../img/Abstract%20Factory.png" class="img-fluid" alt="Abstract Factory Pattern">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Builder Modal -->
+    <div class="modal fade" id="builderModal" tabindex="-1" role="dialog" aria-labelledby="builderModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="builderModalLabel">Builder Pattern</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Separates the construction of a complex object from its representation, allowing the same construction process to create various representations (e.g., pizza customization).</p>
+                    <img src="../img/Builder.png" class="img-fluid" alt="Builder Pattern">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prototype Modal -->
+    <div class="modal fade" id="prototypeModal" tabindex="-1" role="dialog" aria-labelledby="prototypeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="prototypeModalLabel">Prototype Pattern</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Creates new objects by copying existing objects (prototypes) (e.g., cell replication).</p>
+                    <img src="../img/Prototype.png" class="img-fluid" alt="Prototype Pattern">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Structural Patterns Section -->
+    <div class="container">
+        <h3>Structural Patterns</h3>
+        <div id="structuralPatterns" class="row">
+            <!-- Adapter -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Adapter</strong></h4>
+                    <p>Allows incompatible interfaces to work together by wrapping one object with a different interface (e.g., media player adapter).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#adapterModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- Bridge -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Bridge</strong></h4>
+                    <p>Decouples an abstraction from its implementation, so the two can vary independently (e.g., shape and color).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#bridgeModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- Composite -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Composite</strong></h4>
+                    <p>Composes objects into tree structures to represent part-whole hierarchies. Lets clients treat individual objects and compositions of objects uniformly (e.g., employee hierarchy).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#compositeModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- Decorator -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Decorator</strong></h4>
+                    <p>Dynamically adds behaviors to objects without affecting other objects of the same class (e.g., coffee with toppings).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#decoratorModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- Facade -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Facade</strong></h4>
+                    <p>Provides a simplified interface to a complex system of classes, libraries, or frameworks (e.g., computer startup).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#facadeModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- Flyweight -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Flyweight</strong></h4>
+                    <p>Minimizes memory usage by sharing as much data as possible with similar objects.</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#flyweightModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- Proxy -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Proxy</strong></h4>
+                    <p>The Proxy pattern provides a surrogate or placeholder for another object to control access to it.</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#proxyModal">Voir plus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Adapter Modal -->
+    <div class="modal fade" id="adapterModal" tabindex="-1" role="dialog" aria-labelledby="adapterModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adapterModalLabel">Adapter</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Allows incompatible interfaces to work together by wrapping one object with a different interface (e.g., media player adapter).</p>
+                    <img src="../img/Adapter.png" alt="Adapter Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bridge Modal -->
+    <div class="modal fade" id="bridgeModal" tabindex="-1" role="dialog" aria-labelledby="bridgeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bridgeModalLabel">Bridge</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Decouples an abstraction from its implementation, so the two can vary independently (e.g., shape and color).</p>
+                    <img src="../img/Bridge.png" alt="Bridge Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Composite Modal -->
+    <div class="modal fade" id="compositeModal" tabindex="-1" role="dialog" aria-labelledby="compositeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="compositeModalLabel">Composite</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Composes objects into tree structures to represent part-whole hierarchies. Lets clients treat individual objects and compositions of objects uniformly (e.g., employee hierarchy).</p>
+                    <img src="../img/Composite.png" alt="Composite Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decorator Modal -->
+    <div class="modal fade" id="decoratorModal" tabindex="-1" role="dialog" aria-labelledby="decoratorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="decoratorModalLabel">Decorator</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Dynamically adds behaviors to objects without affecting other objects of the same class (e.g., coffee with toppings).</p>
+                    <img src="../img/Decorator.png" alt="Decorator Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facade Modal -->
+    <div class="modal fade" id="facadeModal" tabindex="-1" role="dialog" aria-labelledby="facadeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="facadeModalLabel">Facade</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Provides a simplified interface to a complex system of classes, libraries, or frameworks (e.g., computer startup).</p>
+                    <img src="../img/Facade.png" alt="Facade Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flyweight Modal -->
+    <div class="modal fade" id="flyweightModal" tabindex="-1" role="dialog" aria-labelledby="flyweightModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="flyweightModalLabel">Flyweight</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Minimizes memory usage by sharing as much data as possible with similar objects.</p>
+                    <img src="../img/Flyweight.png" alt="Flyweight Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proxy Modal -->
+    <div class="modal fade" id="proxyModal" tabindex="-1" role="dialog" aria-labelledby="proxyModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="proxyModalLabel">Proxy</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>The Proxy pattern provides a surrogate or placeholder for another object to control access to it.</p>
+                    <img src="../img/Proxy.png" alt="Proxy Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Behavioral Patterns Section -->
+    <div class="container">
+        <h3>Behavioral Patterns</h3>
+        <div id="behavioralPatterns" class="row">
+            <!-- Observer -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Observer</strong></h4>
+                    <p>Defines a one-to-many dependency between objects, so that when one object changes state, all its dependents are notified and updated automatically (e.g., weather station).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#observerModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- State -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>State</strong></h4>
+                    <p>Allows an object to alter its behavior when its internal state changes. The object will appear to change its class (e.g., traffic light).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#stateModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- Strategy -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Strategy</strong></h4>
+                    <p>Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Lets the algorithm vary independently from clients that use it (e.g., payment strategy).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#strategyModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- Template Method -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Template Method</strong></h4>
+                    <p>Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure (e.g., algorithm variations).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#templateMethodModal">Voir plus</button>
+                </div>
+            </div>
+            <!-- Visitor -->
+            <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+                <div class="definition">
+                    <h4><strong>Visitor</strong></h4>
+                    <p>Represents an operation to be performed on the elements of an object structure. Lets you define a new operation without changing the classes of the elements on which it operates (e.g., shipping cost calculation).</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#visitorModal">Voir plus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Observer Modal -->
+    <div class="modal fade" id="observerModal" tabindex="-1" role="dialog" aria-labelledby="observerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="observerModalLabel">Observer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Defines a one-to-many dependency between objects, so that when one object changes state, all its dependents are notified and updated automatically (e.g., weather station).</p>
+                    <img src="../img/Observer.png" alt="Observer Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- State Modal -->
+    <div class="modal fade" id="stateModal" tabindex="-1" role="dialog" aria-labelledby="stateModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="stateModalLabel">State</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Allows an object to alter its behavior when its internal state changes. The object will appear to change its class (e.g., traffic light).</p>
+                    <img src="../img/State.png" alt="State Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategy Modal -->
+    <div class="modal fade" id="strategyModal" tabindex="-1" role="dialog" aria-labelledby="strategyModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="strategyModalLabel">Strategy</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Lets the algorithm vary independently from clients that use it (e.g., payment strategy).</p>
+                    <img src="../img/Strategy.png" alt="Strategy Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Template Method Modal -->
+    <div class="modal fade" id="templateMethodModal" tabindex="-1" role="dialog" aria-labelledby="templateMethodModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="templateMethodModalLabel">Template Method</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure (e.g., algorithm variations).</p>
+                    <img src="../img/Template%20Method.png" alt="Template Method Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visitor Modal -->
+    <div class="modal fade" id="visitorModal" tabindex="-1" role="dialog" aria-labelledby="visitorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="visitorModalLabel">Visitor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Represents an operation to be performed on the elements of an object structure. Lets you define a new operation without changing the classes of the elements on which it operates (e.g., shipping cost calculation).</p>
+                    <img src="../img/Visitor.png" alt="Visitor Pattern Diagram" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
