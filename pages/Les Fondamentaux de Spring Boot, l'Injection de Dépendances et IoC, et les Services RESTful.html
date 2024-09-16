@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Fondamentaux de Spring Boot, l'Injection de Dépendances et IoC, et les Services RESTful</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+<header>
+    <h1>Les Fondamentaux de Spring Boot, l'Injection de Dépendances et IoC, et les Services RESTful</h1>
+</header>
+
+<div class="container">
+    <!-- Back Button -->
+    <a href="../Homepage.html" class="btn btn-back">Retour à la page d'accueil</a>
+
+    <!-- Section: Questions Générales d'Entretien sur Spring Boot -->
+    <h2>Questions Générales d'Entretien sur Spring Boot</h2>
+    <div class="definition">
+        <h3>Qu'est-ce que Spring Boot ? En quoi diffère-t-il du Spring Framework ?</h3>
+        <ul>
+            <li><strong>Spring Boot</strong> est un framework simplifié basé sur Spring qui offre un moyen plus rapide et plus facile de créer des applications Spring autonomes et prêtes pour la production.</li>
+            <li><strong>Différences clés :</strong>
+                <ul>
+                    <li><strong>Configuration opinionnée :</strong> Spring Boot fait des hypothèses sur la configuration de votre application, réduisant ainsi le code boilerplate.</li>
+                    <li><strong>Serveur embarqué :</strong> Inclut des serveurs embarqués comme Tomcat ou Jetty, simplifiant ainsi le déploiement.</li>
+                    <li><strong>Auto-configuration :</strong> Configure automatiquement les composants Spring en fonction des dépendances présentes dans le classpath.</li>
+                    <li><strong>Dépendances Starter :</strong> Paquets préconfigurés pour des fonctionnalités courantes.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Expliquez le concept d'auto-configuration.</h3>
+        <ul>
+            <li><strong>L'auto-configuration</strong> est la capacité de Spring Boot à configurer automatiquement les beans en fonction des classes disponibles dans le classpath. Il analyse vos dépendances et active les classes de configuration appropriées.</li>
+            <li>Par exemple, si vous incluez Spring Data JPA dans le classpath, Spring Boot configurera automatiquement un DataSource, un EntityManagerFactory, et d'autres beans associés.</li>
+        </ul>
+        <h3>Qu'est-ce que les starters Spring Boot ?</h3>
+        <ul>
+            <li><strong>Les starters Spring Boot</strong> sont des descripteurs de dépendances pratiques qui incluent toutes les dépendances nécessaires pour des fonctionnalités spécifiques.</li>
+            <li>Ils simplifient la configuration du projet en fournissant des ensembles de bibliothèques préconfigurés.</li>
+            <li>Exemples : Spring Boot Starter Web, Spring Boot Starter Data JPA, Spring Boot Starter Security.</li>
+        </ul>
+        <h3>Comment Spring Boot simplifie-t-il le développement ?</h3>
+        <ul>
+            <li><strong>Réduction du code boilerplate :</strong> L'auto-configuration et les paramètres par défaut opinionnés éliminent une grande partie de la configuration requise dans les applications Spring traditionnelles.</li>
+            <li><strong>Développement plus rapide :</strong> Les starters et les serveurs embarqués accélèrent la configuration du projet.</li>
+            <li><strong>Tests simplifiés :</strong> Support intégré pour les frameworks de test.</li>
+            <li><strong>Préparation pour la production :</strong> Fonctionnalités intégrées comme les métriques, les vérifications de santé et la configuration externalisée.</li>
+        </ul>
+    </div>
+
+    <!-- Section: Injection de Dépendances et IoC -->
+    <h2>Injection de Dépendances et IoC</h2>
+    <div class="definition">
+        <h3>Expliquez l'injection de dépendances.</h3>
+        <ul>
+            <li><strong>L'injection de dépendances</strong> est un modèle de conception où les objets reçoivent leurs dépendances de sources externes plutôt que de les créer eux-mêmes.</li>
+            <li>Spring gère le cycle de vie des objets et les injecte là où c'est nécessaire, favorisant un couplage faible et une meilleure testabilité.</li>
+        </ul>
+        <h3>Quels sont les différents types d'injection de dépendances ?</h3>
+        <ul>
+            <li><strong>Injection par constructeur :</strong> Les dépendances sont fournies via le constructeur.</li>
+            <li><strong>Injection par setter :</strong> Les dépendances sont injectées via des méthodes setter.</li>
+            <li><strong>Injection par champ :</strong> Les dépendances sont injectées directement dans les champs (généralement déconseillé).</li>
+        </ul>
+        <h3>Comment Spring gère-t-il le cycle de vie des beans ?</h3>
+        <ul>
+            <li>Spring gère le cycle de vie complet des beans, y compris :</li>
+            <ul>
+                <li>L'instanciation</li>
+                <li>La population des propriétés</li>
+                <li>L'injection de dépendances</li>
+                <li>Les post-processeurs (BeanPostProcessors)</li>
+                <li>L'initialisation</li>
+                <li>La destruction</li>
+            </ul>
+        </ul>
+        <h3>Expliquez les composants de Spring MVC.</h3>
+        <ul>
+            <li><strong>DispatcherServlet :</strong> Le contrôleur frontal qui gère toutes les requêtes HTTP entrantes.</li>
+            <li><strong>HandlerMapping :</strong> Associe les requêtes entrantes aux contrôleurs appropriés.</li>
+            <li><strong>Controller :</strong> Traite la requête et renvoie un objet ModelAndView.</li>
+            <li><strong>ModelAndView :</strong> Contient les données du modèle et le nom de la vue.</li>
+            <li><strong>ViewResolver :</strong> Résout le nom de la vue en une implémentation de vue réelle.</li>
+            <li><strong>View :</strong> Rendre les données du modèle dans un format (par exemple, HTML, JSON) pouvant être envoyé au client.</li>
+        </ul>
+        <h3>Comment fonctionne le traitement des requêtes dans Spring MVC ?</h3>
+        <ol>
+            <li>Le client envoie une requête HTTP à DispatcherServlet.</li>
+            <li>DispatcherServlet consulte le HandlerMapping pour trouver le contrôleur approprié pour la requête.</li>
+            <li>DispatcherServlet invoque le contrôleur, en passant les objets request et response.</li>
+            <li>Le contrôleur traite la requête, effectue la logique métier et renvoie un objet ModelAndView.</li>
+            <li>DispatcherServlet utilise ViewResolver pour localiser la vue appropriée en fonction du nom de la vue de ModelAndView.</li>
+            <li>La vue rend les données du modèle et renvoie la réponse à DispatcherServlet.</li>
+            <li>DispatcherServlet envoie la réponse au client.</li>
+        </ol>
+        <h3>À quoi servent les annotations comme @Controller, @RequestMapping, @ResponseBody ?</h3>
+        <ul>
+            <li><strong>@Controller :</strong> Marque une classe comme contrôleur Spring MVC.</li>
+            <li><strong>@RequestMapping :</strong> Mappe les requêtes HTTP à des méthodes de gestion spécifiques au sein d'un contrôleur. Peut être utilisé au niveau de la classe et de la méthode.</li>
+            <li><strong>@ResponseBody :</strong> Indique que la valeur de retour d'une méthode doit être écrite directement dans le corps de la réponse HTTP, souvent utilisé pour les services RESTful.</li>
+        </ul>
+        <h3>Comment fonctionne Spring Data JPA ?</h3>
+        <ul>
+            <li><strong>Spring Data JPA</strong> simplifie l'accès aux données en fournissant une couche d'abstraction de repository sur JPA (Java Persistence API).</li>
+            <li>Il génère automatiquement des implémentations de repository basées sur les définitions d'interface.</li>
+            <li>Vous définissez des interfaces de repository en étendant <code>JpaRepository</code> ou <code>CrudRepository</code> et déclarez des méthodes de requête en utilisant des conventions de nommage.</li>
+            <li>Spring Data JPA traduit ces noms de méthode en requêtes JPA réelles.</li>
+            <li>Il offre des fonctionnalités supplémentaires comme la pagination, le tri, l'audit, et plus encore.</li>
+        </ul>
+        <h3>Expliquez la différence entre JpaRepository et CrudRepository.</h3>
+        <ul>
+            <li><strong>CrudRepository</strong> fournit des opérations CRUD (Create, Read, Update, Delete) de base pour les entités.</li>
+            <li><strong>JpaRepository</strong> étend CrudRepository et ajoute des méthodes spécifiques à JPA comme <code>findAll</code>, <code>count</code>, <code>delete</code>, <code>flush</code>, et d'autres.</li>
+            <li>Dans la plupart des cas, <code>JpaRepository</code> est préféré car il offre un ensemble de fonctionnalités plus riche.</li>
+        </ul>
+        <h3>Comment gérer les transactions dans Spring Boot ?</h3>
+        <ul>
+            <li>Spring Boot fournit une gestion transactionnelle déclarative en utilisant des annotations comme <code>@Transactional</code>.</li>
+            <li>Vous pouvez appliquer <code>@Transactional</code> au niveau de la méthode ou de la classe.</li>
+            <li>Spring gère le cycle de vie de la transaction, y compris la validation, le rollback, et la gestion des exceptions.</li>
+            <li>Pour un contrôle plus granulaire, vous pouvez utiliser une gestion transactionnelle programmatique avec <code>PlatformTransactionManager</code>.</li>
+        </ul>
+        <h3>Comment écrire des tests unitaires et d'intégration pour les applications Spring Boot ?</h3>
+        <ul>
+            <li><strong>Tests unitaires :</strong> Ils se concentrent sur le test des composants individuels isolément. Utilisez des frameworks de mock comme Mockito pour isoler les dépendances.</li>
+            <li><strong>Tests d'intégration :</strong> Ils testent comment les composants fonctionnent ensemble. Utilisez <code>@SpringBootTest</code> pour démarrer le contexte Spring et tester tout le flux de l'application.</li>
+        </ul>
+        <h3>Quels frameworks de test utilisez-vous ?</h3>
+        <ul>
+            <li><strong>JUnit :</strong> Le framework de test le plus populaire pour Java.</li>
+            <li><strong>Mockito :</strong> Framework de mock couramment utilisé pour les tests unitaires.</li>
+            <li><strong>Hamcrest :</strong> Fournit des matchers pour écrire des assertions expressives.</li>
+            <li><strong>AssertJ :</strong> Offre des assertions fluides pour une meilleure lisibilité.</li>
+        </ul>
+        <h3>Qu'est-ce que le mocking et pourquoi est-ce important ?</h3>
+        <ul>
+            <li><strong>Le mocking</strong> est le processus de création d'objets simulés pour remplacer les dépendances réelles dans les tests unitaires.</li>
+            <li>Il isole le composant testé, ce qui facilite la concentration sur son comportement sans dépendre de systèmes externes.</li>
+            <li>Améliore la vitesse, la fiabilité et la maintenabilité des tests.</li>
+        </ul>
+    </div>
+
+    <!-- Section: Services RESTful -->
+    <h2>Services RESTful</h2>
+    <div class="definition">
+        <h3>Comment créer des API RESTful avec Spring Boot ?</h3>
+        <ul>
+            <li><strong>Dépendance :</strong> Inclure la dépendance <code>spring-boot-starter-web</code>.</li>
+            <li><strong>Classe de contrôleur :</strong> Créer un contrôleur annoté avec <code>@RestController</code>.</li>
+            <li><strong>Mapping des endpoints :</strong> Utiliser <code>@RequestMapping</code> ou <code>@GetMapping</code>, <code>@PostMapping</code>, etc. pour mapper les méthodes HTTP aux méthodes du contrôleur.</li>
+            <li><strong>Gestion des données :</strong> Utiliser <code>@RequestBody</code> et <code>@ResponseBody</code> pour le mapping du corps de la requête et de la réponse.</li>
+            <li><strong>Gestion des erreurs :</strong> Implémenter des méthodes <code>@ExceptionHandler</code> pour gérer les exceptions.</li>
+        </ul>
+        <h3>Expliquez les différentes méthodes HTTP et leurs cas d'utilisation.</h3>
+        <ul>
+            <li><strong>GET :</strong> Récupère une ressource.</li>
+            <li><strong>POST :</strong> Crée une nouvelle ressource.</li>
+            <li><strong>PUT :</strong> Met à jour une ressource entière.</li>
+            <li><strong>PATCH :</strong> Met à jour une partie d'une ressource.</li>
+            <li><strong>DELETE :</strong> Supprime une ressource.</li>
+            <li><strong>OPTIONS :</strong> Récupère les méthodes HTTP disponibles pour une ressource.</li>
+            <li><strong>HEAD :</strong> Récupère des métadonnées sur une ressource sans le contenu.</li>
+        </ul>
+        <h3>Comment gérer les erreurs dans les API REST ?</h3>
+        <ul>
+            <li><strong>@ExceptionHandler :</strong> Définir des méthodes pour gérer des exceptions spécifiques.</li>
+            <li><strong>HttpStatus :</strong> Retourner des codes de statut HTTP appropriés (par exemple, 404, 500).</li>
+            <li><strong>Objets d'erreur :</strong> Créer des objets d'erreur personnalisés avec des messages et des codes d'erreur.</li>
+            <li><strong>Gestionnaires d'exceptions globaux :</strong> Gérer les exceptions non capturées.</li>
+            <li><strong>Journalisation :</strong> Consigner les erreurs pour le débogage et la surveillance.</li>
+        </ul>
+    </div>
+
+    <!-- Section: Résolution de Problèmes et Expérience Pratique -->
+    <h2>Résolution de Problèmes et Expérience Pratique</h2>
+    <div class="definition">
+        <h3>Design Patterns</h3>
+        <ul>
+            <li><strong>Patterns courants :</strong> Factory, Singleton, Repository, Template Method, Observer.</li>
+            <li><strong>Avantages :</strong> Améliorer la réutilisabilité, la maintenabilité et la flexibilité du code.</li>
+            <li><strong>Exemples :</strong> Utiliser le pattern Factory pour créer différents types d'objets en fonction de la configuration, implémenter le pattern Observer pour la gestion des événements.</li>
+        </ul>
+        <h3>Optimisation des Performances</h3>
+        <ul>
+            <li><strong>Profiling :</strong> Identifier les goulets d'étranglement en utilisant des outils comme Spring Boot Actuator ou des profileurs.</li>
+            <li><strong>Optimisation de la base de données :</strong> Indexation, optimisation des requêtes, pooling de connexions.</li>
+            <li><strong>Caching :</strong> Utiliser Spring Cache ou des solutions de cache tierces.</li>
+            <li><strong>Traitement asynchrone :</strong> Déléguer les tâches de longue durée.</li>
+            <li><strong>Tests de charge :</strong> Identifier les limites de performance et optimiser en conséquence.</li>
+            <li><strong>Métriques :</strong> Surveiller les indicateurs clés de performance (KPI).</li>
+        </ul>
+        <h3>Sécurité</h3>
+        <ul>
+            <li><strong>Authentification :</strong> Authentification des utilisateurs avec Spring Security.</li>
+            <li><strong>Autorisation :</strong> Contrôle d'accès basé sur les rôles et les permissions.</li>
+            <li><strong>Chiffrement des données :</strong> Protéger les données sensibles.</li>
+            <li><strong>Validation des entrées :</strong> Prévenir les attaques par injection (SQL, XSS).</li>
+            <li><strong>HTTPS :</strong> Communication chiffrée.</li>
+            <li><strong>En-têtes de sécurité :</strong> Implémenter les meilleures pratiques de sécurité (par exemple, HSTS, CSP).</li>
+        </ul>
+        <h3>Architecture Microservices</h3>
+        <ul>
+            <li><strong>Expérience :</strong> Discuter des projets impliquant le développement de microservices.</li>
+            <li><strong>Découverte de services :</strong> Utiliser des outils comme Eureka ou Consul.</li>
+            <li><strong>Équilibrage de charge :</strong> Implémenter l'équilibrage de charge en utilisant Spring Cloud LoadBalancer ou des solutions matérielles.</li>
+            <li><strong>Défis :</strong> Complexité des systèmes distribués, cohérence des données, tolérance aux pannes.</li>
+        </ul>
+        <h3>Plates-formes Cloud</h3>
+        <ul>
+            <li><strong>Expérience :</strong> Mentionner les plates-formes cloud utilisées (AWS, GCP, Azure).</li>
+            <li><strong>Déploiement :</strong> Discuter des stratégies de déploiement (par exemple, containerisation, infrastructure as code).</li>
+            <li><strong>Gestion de la configuration :</strong> Utiliser Spring Cloud Config ou des solutions spécifiques à la plate-forme.</li>
+            <li><strong>Scalabilité :</strong> Implémenter l'auto-scaling en fonction de la charge.</li>
+        </ul>
+        <h3>Débogage et Dépannage</h3>
+        <ul>
+            <li><strong>Journalisation :</strong> Utiliser le framework de journalisation de Spring Boot pour le débogage.</li>
+            <li><strong>Outils de débogage :</strong> Utiliser les débogueurs d'IDE et le débogage à distance.</li>
+            <li><strong>Surveillance :</strong> Surveiller la santé et la performance de l'application à l'aide de métriques.</li>
+            <li><strong>Gestion des erreurs :</strong> Implémenter une gestion des erreurs et une journalisation appropriées.</li>
+            <li><strong>Tests :</strong> Écrire des tests unitaires et d'intégration complets.</li>
+        </ul>
+    </div>
+
+    <!-- Section: Sujets Supplémentaires -->
+    <h2>Sujets Supplémentaires</h2>
+    <div class="definition">
+        <h3>Programmation Réactive</h3>
+        <ul>
+            <li><strong>Spring WebFlux :</strong> Construire des applications réactives en utilisant le style de programmation fonctionnelle.</li>
+            <li><strong>I/O non-bloquante :</strong> Gérer une haute concurrence de manière efficace.</li>
+            <li><strong>Flux réactifs :</strong> Adhérer aux normes de programmation réactive.</li>
+        </ul>
+        <h3>Caching</h3>
+        <ul>
+            <li><strong>Spring Cache :</strong> Implémenter le caching pour les données fréquemment consultées.</li>
+            <li><strong>Stratégies d'éviction du cache :</strong> Choisir des politiques d'expiration du cache appropriées.</li>
+            <li><strong>Invalidation du cache :</strong> Assurer la cohérence des données.</li>
+        </ul>
+        <h3>Messagerie</h3>
+        <ul>
+            <li><strong>Spring Kafka :</strong> Intégrer avec Apache Kafka pour un traitement des messages évolutif.</li>
+            <li><strong>Spring RabbitMQ :</strong> Intégrer avec RabbitMQ pour la mise en file d'attente des messages.</li>
+            <li><strong>Formats de message :</strong> Choisir des formats de message appropriés (JSON, Avro).</li>
+        </ul>
+        <h3>CI/CD</h3>
+        <ul>
+            <li><strong>Jenkins, GitLab CI/CD :</strong> Automatiser les processus de build, test et déploiement.</li>
+            <li><strong>Pipelines :</strong> Définir les étapes de build et de déploiement.</li>
+            <li><strong>Gestion de version :</strong> Intégrer avec Git pour la gestion du code.</li>
+        </ul>
+        <h3>Docker et Kubernetes</h3>
+        <ul>
+            <li><strong>Containerisation :</strong> Packager des applications dans des conteneurs Docker.</li>
+            <li><strong>Orchestration :</strong> Gérer le cycle de vie des conteneurs en utilisant Kubernetes.</li>
+            <li><strong>Déploiement :</strong> Déployer des applications dans des clusters Kubernetes.</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Votre Société
+</footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

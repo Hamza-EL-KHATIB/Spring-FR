@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+    <h1>Transactions</h1>
+</header>
+
+<div class="container mt-4">
+    <!-- Back Button -->
+    <a href="../Homepage.html" class="btn btn-back mb-4">Retour à la page d'accueil</a>
+
+    <!-- Introduction Section -->
+    <section class="definition">
+        <h3>Introduction</h3>
+        <p>Les transactions sont un concept fondamental en gestion de bases de données. Elles garantissent la fiabilité, la cohérence et l'intégrité des données. Les principes ACID sont les piliers de la gestion des transactions et assurent que les modifications apportées à une base de données sont toujours correctes et durables.</p>
+    </section>
+
+    <!-- Types of Transactions Section -->
+    <section class="definition mt-4">
+        <h3>Les différents types de transactions</h3>
+        <ul>
+            <li><strong>Transactions courtes :</strong> Des transactions simples et rapides.</li>
+            <li><strong>Transactions longues :</strong> Des transactions qui peuvent durer plusieurs minutes ou même des heures.</li>
+            <li><strong>Transactions distribuées :</strong> Des transactions qui impliquent plusieurs bases de données.</li>
+        </ul>
+    </section>
+
+    <!-- Specific Concepts Section -->
+    <section class="definition mt-4">
+        <h3>Concepts plus spécifiques</h3>
+        <ul>
+            <li><strong>Le verrouillage (locking) :</strong> Comment les systèmes de gestion de bases de données empêchent les conflits entre les transactions.</li>
+            <li><strong>Les niveaux d'isolation :</strong> Les différents niveaux d'isolation possibles pour les transactions.</li>
+            <li><strong>Les points de sauvegarde :</strong> Comment les bases de données sont sauvegardées pour assurer la récupération en cas de panne.</li>
+        </ul>
+    </section>
+
+    <!-- ACID Principles Section -->
+    <section class="definition mt-4">
+        <h3>Les principes ACID</h3>
+        <ul>
+            <li><strong>Atomicité :</strong> Une transaction est soit exécutée entièrement, soit annulée complètement. Il n'y a pas de demi-mesures.</li>
+            <li><strong>Cohérence :</strong> Une transaction amène la base de données d'un état cohérent à un autre état cohérent. Les règles d'intégrité de la base de données sont toujours respectées.</li>
+            <li><strong>Isolation :</strong> Les transactions sont exécutées de manière isolée, comme si elles étaient les seules à s'exécuter.</li>
+            <li><strong>Durabilité :</strong> Une fois qu'une transaction a été validée, les modifications qu'elle a apportées sont permanentes, même en cas de panne système.</li>
+        </ul>
+    </section>
+
+    <!-- Image Section -->
+    <section class="definition mt-4">
+        <h3>Diagramme</h3>
+        <img src="../img/Acid principles.png" class="img-fluid" alt="ACID Principles Diagram">
+    </section>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
