@@ -12,6 +12,7 @@ header {
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 header h1 {
@@ -138,4 +139,61 @@ hr {
     border: 0;
     border-top: 2px solid #e0e0e0;
     margin: 30px 0;
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #f0f2f5; /* Light text for better readability */
+}
+
+body.dark-mode .buttons-section {
+    background-color: #1e1e1e; /* Dark background for the buttons section */
+}
+
+body.dark-mode .definition,
+body.dark-mode .info-section {
+    background-color: #1e1e1e; /* Dark background for content sections */
+    color: #f0f2f5; /* Light text color for readability */
+}
+
+/* Styling the dark mode toggle switch */
+#darkModeToggleWrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#darkModeToggle {
+    display: none;
+}
+
+.switch {
+    width: 50px;
+    height: 26px;
+    background-color: #ccc;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.switch::before {
+    content: '';
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#darkModeToggle:checked + .switch {
+    background-color: #6e45e2; /* Adjust this for dark mode appearance */
+}
+
+#darkModeToggle:checked + .switch::before {
+    transform: translateX(24px);
 }

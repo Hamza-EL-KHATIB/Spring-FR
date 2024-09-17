@@ -25,6 +25,7 @@
             padding: 40px 20px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         header h1 {
@@ -127,15 +128,82 @@
         .btn-info:hover {
             background-color: #7b1fa2;
         }
+        /* Add this to your existing CSS */
+        body.dark-mode {
+            background-color: #121212; /* Dark background */
+            color: #f0f2f5; /* Light text for better readability */
+        }
+
+        body.dark-mode .buttons-section {
+            background-color: #1e1e1e; /* Dark background for the buttons section */
+        }
+
+        body.dark-mode .definition,
+        body.dark-mode .info-section {
+            background-color: #1e1e1e; /* Dark background for content sections */
+            color: #f0f2f5; /* Light text color for readability */
+        }
+
+        /* Styling the dark mode toggle switch */
+        #darkModeToggleWrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #darkModeToggle {
+            display: none;
+        }
+
+        .switch {
+            width: 50px;
+            height: 26px;
+            background-color: #ccc;
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .switch::before {
+            content: '';
+            width: 22px;
+            height: 22px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #darkModeToggle:checked + .switch {
+            background-color: #6e45e2; /* Adjust this for dark mode appearance */
+        }
+
+        #darkModeToggle:checked + .switch::before {
+            transform: translateX(24px);
+        }
+
     </style>
 </head>
 <body>
 <header>
     <h1>Bienvenue dans les Ressources Spring Framework</h1>
     <p>Votre point de départ pour explorer divers aspects du Spring Framework.</p>
+
+    <!-- Dark mode toggle switch -->
+    <div id="darkModeToggleWrapper">
+        <input type="checkbox" id="darkModeToggle">
+        <label for="darkModeToggle" class="switch"></label>
+    </div>
 </header>
 
-<!-- Buttons Section -->
+<!-- Existing content here -->
+
+
+
 <div class="buttons-section">
     <a class="btn btn-primary btn-custom"
        href="pages/Les Fondamentaux de Spring Boot, l'Injection de Dépendances et IoC, et les Services RESTful.html">Les
@@ -239,6 +307,33 @@
 <footer>
     <p>&copy; 2024 Ressources Spring Framework</p>
 </footer>
+<script>
+    // Function to toggle dark background
+    function toggleDarkMode() {
+        const body = document.body;
+
+        // Toggle the dark mode class
+        body.classList.toggle('dark-mode');
+
+        // Save the preference in localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('background', 'dark');
+        } else {
+            localStorage.setItem('background', 'light');
+        }
+    }
+
+    // Event listener for the button
+    document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+
+    // Apply the saved background preference on page load
+    window.onload = function() {
+        const background = localStorage.getItem('background');
+        if (background === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    }
+</script>
 
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
