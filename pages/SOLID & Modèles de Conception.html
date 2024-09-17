@@ -74,17 +74,17 @@
     </div>
 
     <!-- Section: Design Patterns -->
-    <h2><strong>Design Patterns</strong></h2>
+    <h2><strong>Patrons de Conception</strong></h2>
 
-    <!-- Creational Patterns Section -->
+    <!-- Section: Creational Patterns -->
     <div class="container">
-        <h3>Creational Patterns</h3>
+        <h3>Patterns Créationnels</h3>
         <div id="creationalPatterns" class="row">
             <!-- Singleton Pattern -->
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Singleton</strong></h4>
-                    <p>Ensures a class has only one instance and provides a global point of access to it (e.g., logging system).</p>
+                    <p>Assure qu'une classe n'a qu'une seule instance et fournit un point d'accès global à celle-ci (par exemple, système de journalisation).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#singletonModal">Voir plus</button>
                 </div>
             </div>
@@ -92,8 +92,8 @@
             <!-- Factory Method Pattern -->
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
-                    <h4><strong>Factory Method</strong></h4>
-                    <p>Defines an interface for creating an object but lets subclasses decide which class to instantiate (e.g., shape factory).</p>
+                    <h4><strong>Méthode de Fabrique</strong>(Factory Method)</h4>
+                    <p>Définit une interface pour créer un objet mais laisse les sous-classes décider quelle classe instancier (par exemple, fabrique de formes).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#factoryMethodModal">Voir plus</button>
                 </div>
             </div>
@@ -101,8 +101,8 @@
             <!-- Abstract Factory Pattern -->
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
-                    <h4><strong>Abstract Factory</strong></h4>
-                    <p>Provides an interface for creating families of related or dependent objects without specifying their concrete classes (e.g., GUI toolkit).</p>
+                    <h4><strong>Fabrique Abstraite</strong>(Abstract Factory)</h4>
+                    <p>Fournit une interface pour créer des familles d'objets liés ou dépendants sans spécifier leurs classes concrètes (par exemple, boîte à outils GUI).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#abstractFactoryModal">Voir plus</button>
                 </div>
             </div>
@@ -110,8 +110,8 @@
             <!-- Builder Pattern -->
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
-                    <h4><strong>Builder</strong></h4>
-                    <p>Separates the construction of a complex object from its representation, allowing the same construction process to create various representations (e.g., pizza customization).</p>
+                    <h4><strong>Constructeur</strong>(Builder)</h4>
+                    <p>Sépare la construction d'un objet complexe de sa représentation, permettant au même processus de construction de créer diverses représentations (par exemple, personnalisation de pizza).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#builderModal">Voir plus</button>
                 </div>
             </div>
@@ -120,7 +120,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Prototype</strong></h4>
-                    <p>Creates new objects by copying existing objects (prototypes) (e.g., cell replication).</p>
+                    <p>Crée de nouveaux objets en copiant des objets existants (prototypes) (par exemple, réplication cellulaire).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#prototypeModal">Voir plus</button>
                 </div>
             </div>
@@ -133,14 +133,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="singletonModalLabel">Singleton Pattern</h5>
+                    <h5 class="modal-title" id="singletonModalLabel">Patron Singleton</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Ensures a class has only one instance and provides a global point of access to it (e.g., logging system).</p>
-                    <img src="img/Singleton.png" class="img-fluid" alt="Singleton Pattern">
+                    <p>Assure qu'une classe n'a qu'une seule instance et fournit un point d'accès global à celle-ci (par exemple, système de journalisation).</p>
+                    <img src="../img/Singleton.png" class="img-fluid" alt="Patron Singleton">
                 </div>
             </div>
         </div>
@@ -151,14 +151,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="factoryMethodModalLabel">Factory Method Pattern</h5>
+                    <h5 class="modal-title" id="factoryMethodModalLabel">Patron Méthode de Fabrique</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Defines an interface for creating an object but lets subclasses decide which class to instantiate (e.g., shape factory).</p>
-                    <img src="../img/Factory%20Method.png" class="img-fluid" alt="Factory Method Pattern">
+                    <p>Définit une interface pour créer un objet mais laisse les sous-classes décider quelle classe instancier (par exemple, fabrique de formes).</p>
+                    <img src="../img/Factory%20Method.png" class="img-fluid" alt="Patron Méthode de Fabrique">
                 </div>
             </div>
         </div>
@@ -169,14 +169,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="abstractFactoryModalLabel">Abstract Factory Pattern</h5>
+                    <h5 class="modal-title" id="abstractFactoryModalLabel">Patron Fabrique Abstraite</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Provides an interface for creating families of related or dependent objects without specifying their concrete classes (e.g., GUI toolkit).</p>
-                    <img src="../img/Abstract%20Factory.png" class="img-fluid" alt="Abstract Factory Pattern">
+                    <p>Fournit une interface pour créer des familles d'objets liés ou dépendants sans spécifier leurs classes concrètes (par exemple, boîte à outils GUI).</p>
+                    <img src="../img/Abstract%20Factory.png" class="img-fluid" alt="Patron Fabrique Abstraite">
                 </div>
             </div>
         </div>
@@ -187,14 +187,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="builderModalLabel">Builder Pattern</h5>
+                    <h5 class="modal-title" id="builderModalLabel">Patron Constructeur</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Separates the construction of a complex object from its representation, allowing the same construction process to create various representations (e.g., pizza customization).</p>
-                    <img src="../img/Builder.png" class="img-fluid" alt="Builder Pattern">
+                    <p>Sépare la construction d'un objet complexe de sa représentation, permettant au même processus de construction de créer diverses représentations (par exemple, personnalisation de pizza).</p>
+                    <img src="../img/Builder.png" class="img-fluid" alt="Patron Constructeur">
                 </div>
             </div>
         </div>
@@ -205,29 +205,30 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="prototypeModalLabel">Prototype Pattern</h5>
+                    <h5 class="modal-title" id="prototypeModalLabel">Patron Prototype</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Creates new objects by copying existing objects (prototypes) (e.g., cell replication).</p>
-                    <img src="../img/Prototype.png" class="img-fluid" alt="Prototype Pattern">
+                    <p>Crée de nouveaux objets en copiant des objets existants (prototypes) (par exemple, réplication cellulaire).</p>
+                    <img src="../img/Prototype.png" class="img-fluid" alt="Patron Prototype">
                 </div>
             </div>
         </div>
     </div>
 
 
-    <!-- Structural Patterns Section -->
+
+    <!-- Section: Patterns Structurels -->
     <div class="container">
-        <h3>Structural Patterns</h3>
+        <h3>Patterns Structurels</h3>
         <div id="structuralPatterns" class="row">
             <!-- Adapter -->
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Adapter</strong></h4>
-                    <p>Allows incompatible interfaces to work together by wrapping one object with a different interface (e.g., media player adapter).</p>
+                    <p>Permet à des interfaces incompatibles de fonctionner ensemble en enveloppant un objet avec une interface différente (par exemple, adaptateur de lecteur multimédia).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#adapterModal">Voir plus</button>
                 </div>
             </div>
@@ -235,7 +236,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Bridge</strong></h4>
-                    <p>Decouples an abstraction from its implementation, so the two can vary independently (e.g., shape and color).</p>
+                    <p>Dissocie une abstraction de son implémentation, permettant aux deux de varier indépendamment (par exemple, forme et couleur).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#bridgeModal">Voir plus</button>
                 </div>
             </div>
@@ -243,7 +244,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Composite</strong></h4>
-                    <p>Composes objects into tree structures to represent part-whole hierarchies. Lets clients treat individual objects and compositions of objects uniformly (e.g., employee hierarchy).</p>
+                    <p>Compose des objets en structures arborescentes pour représenter des hiérarchies partie-tout. Permet aux clients de traiter les objets individuels et les compositions d'objets de manière uniforme (par exemple, hiérarchie des employés).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#compositeModal">Voir plus</button>
                 </div>
             </div>
@@ -251,7 +252,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Decorator</strong></h4>
-                    <p>Dynamically adds behaviors to objects without affecting other objects of the same class (e.g., coffee with toppings).</p>
+                    <p>Ajoute dynamiquement des comportements aux objets sans affecter les autres objets de la même classe (par exemple, café avec garnitures).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#decoratorModal">Voir plus</button>
                 </div>
             </div>
@@ -259,7 +260,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Facade</strong></h4>
-                    <p>Provides a simplified interface to a complex system of classes, libraries, or frameworks (e.g., computer startup).</p>
+                    <p>Fournit une interface simplifiée à un système complexe de classes, bibliothèques ou frameworks (par exemple, démarrage de l'ordinateur).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#facadeModal">Voir plus</button>
                 </div>
             </div>
@@ -267,7 +268,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Flyweight</strong></h4>
-                    <p>Minimizes memory usage by sharing as much data as possible with similar objects.</p>
+                    <p>Minimise l'utilisation de la mémoire en partageant autant de données que possible avec des objets similaires.</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#flyweightModal">Voir plus</button>
                 </div>
             </div>
@@ -275,7 +276,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Proxy</strong></h4>
-                    <p>The Proxy pattern provides a surrogate or placeholder for another object to control access to it.</p>
+                    <p>Le pattern Proxy fournit un substitut ou un espace réservé pour un autre objet afin de contrôler l'accès à celui-ci.</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#proxyModal">Voir plus</button>
                 </div>
             </div>
@@ -294,8 +295,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Allows incompatible interfaces to work together by wrapping one object with a different interface (e.g., media player adapter).</p>
-                    <img src="../img/Adapter.png" alt="Adapter Pattern Diagram" class="img-fluid"/>
+                    <p>Permet à des interfaces incompatibles de fonctionner ensemble en enveloppant un objet avec une interface différente (par exemple, adaptateur de lecteur multimédia).</p>
+                    <img src="../img/Adapter.png" alt="Diagramme du pattern Adapter" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -312,8 +313,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Decouples an abstraction from its implementation, so the two can vary independently (e.g., shape and color).</p>
-                    <img src="../img/Bridge.png" alt="Bridge Pattern Diagram" class="img-fluid"/>
+                    <p>Dissocie une abstraction de son implémentation, permettant aux deux de varier indépendamment (par exemple, forme et couleur).</p>
+                    <img src="../img/Bridge.png" alt="Diagramme du pattern Bridge" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -330,8 +331,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Composes objects into tree structures to represent part-whole hierarchies. Lets clients treat individual objects and compositions of objects uniformly (e.g., employee hierarchy).</p>
-                    <img src="../img/Composite.png" alt="Composite Pattern Diagram" class="img-fluid"/>
+                    <p>Compose des objets en structures arborescentes pour représenter des hiérarchies partie-tout. Permet aux clients de traiter les objets individuels et les compositions d'objets de manière uniforme (par exemple, hiérarchie des employés).</p>
+                    <img src="../img/Composite.png" alt="Diagramme du pattern Composite" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -348,8 +349,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Dynamically adds behaviors to objects without affecting other objects of the same class (e.g., coffee with toppings).</p>
-                    <img src="../img/Decorator.png" alt="Decorator Pattern Diagram" class="img-fluid"/>
+                    <p>Ajoute dynamiquement des comportements aux objets sans affecter les autres objets de la même classe (par exemple, café avec garnitures).</p>
+                    <img src="../img/Decorator.png" alt="Diagramme du pattern Decorator" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -366,8 +367,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Provides a simplified interface to a complex system of classes, libraries, or frameworks (e.g., computer startup).</p>
-                    <img src="../img/Facade.png" alt="Facade Pattern Diagram" class="img-fluid"/>
+                    <p>Fournit une interface simplifiée à un système complexe de classes, bibliothèques ou frameworks (par exemple, démarrage de l'ordinateur).</p>
+                    <img src="../img/Facade.png" alt="Diagramme du pattern Facade" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -384,8 +385,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Minimizes memory usage by sharing as much data as possible with similar objects.</p>
-                    <img src="../img/Flyweight.png" alt="Flyweight Pattern Diagram" class="img-fluid"/>
+                    <p>Minimise l'utilisation de la mémoire en partageant autant de données que possible avec des objets similaires.</p>
+                    <img src="../img/Flyweight.png" alt="Diagramme du pattern Flyweight" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -402,23 +403,24 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>The Proxy pattern provides a surrogate or placeholder for another object to control access to it.</p>
-                    <img src="../img/Proxy.png" alt="Proxy Pattern Diagram" class="img-fluid"/>
+                    <p>Le pattern Proxy fournit un substitut ou un espace réservé pour un autre objet afin de contrôler l'accès à celui-ci.</p>
+                    <img src="../img/Proxy.png" alt="Diagramme du pattern Proxy" class="img-fluid"/>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <!-- Behavioral Patterns Section -->
+
+    <!-- Section: Patterns Comportementaux -->
     <div class="container">
-        <h3>Behavioral Patterns</h3>
+        <h3>Patterns Comportementaux (Behavioral)</h3>
         <div id="behavioralPatterns" class="row">
             <!-- Observer -->
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Observer</strong></h4>
-                    <p>Defines a one-to-many dependency between objects, so that when one object changes state, all its dependents are notified and updated automatically (e.g., weather station).</p>
+                    <p>Définit une dépendance de un à plusieurs entre les objets, de sorte que lorsqu'un objet change d'état, tous ses dépendants sont notifiés et mis à jour automatiquement (par exemple, station météo).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#observerModal">Voir plus</button>
                 </div>
             </div>
@@ -426,7 +428,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>State</strong></h4>
-                    <p>Allows an object to alter its behavior when its internal state changes. The object will appear to change its class (e.g., traffic light).</p>
+                    <p>Permet à un objet de modifier son comportement lorsque son état interne change. L'objet semble changer de classe (par exemple, feu de circulation).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#stateModal">Voir plus</button>
                 </div>
             </div>
@@ -434,7 +436,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Strategy</strong></h4>
-                    <p>Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Lets the algorithm vary independently from clients that use it (e.g., payment strategy).</p>
+                    <p>Définit une famille d'algorithmes, encapsule chacun d'eux et les rend interchangeables. Permet à l'algorithme de varier indépendamment des clients qui l'utilisent (par exemple, stratégie de paiement).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#strategyModal">Voir plus</button>
                 </div>
             </div>
@@ -442,7 +444,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Template Method</strong></h4>
-                    <p>Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure (e.g., algorithm variations).</p>
+                    <p>Définit le squelette d'un algorithme dans une méthode, en reportant certaines étapes aux sous-classes. Permet aux sous-classes de redéfinir certaines étapes d'un algorithme sans modifier la structure de l'algorithme (par exemple, variations d'algorithmes).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#templateMethodModal">Voir plus</button>
                 </div>
             </div>
@@ -450,7 +452,7 @@
             <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
                 <div class="definition">
                     <h4><strong>Visitor</strong></h4>
-                    <p>Represents an operation to be performed on the elements of an object structure. Lets you define a new operation without changing the classes of the elements on which it operates (e.g., shipping cost calculation).</p>
+                    <p>Représente une opération à effectuer sur les éléments d'une structure d'objet. Permet de définir une nouvelle opération sans modifier les classes des éléments sur lesquels elle opère (par exemple, calcul des frais d'expédition).</p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#visitorModal">Voir plus</button>
                 </div>
             </div>
@@ -469,8 +471,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Defines a one-to-many dependency between objects, so that when one object changes state, all its dependents are notified and updated automatically (e.g., weather station).</p>
-                    <img src="../img/Observer.png" alt="Observer Pattern Diagram" class="img-fluid"/>
+                    <p>Définit une dépendance de un à plusieurs entre les objets, de sorte que lorsqu'un objet change d'état, tous ses dépendants sont notifiés et mis à jour automatiquement (par exemple, station météo).</p>
+                    <img src="../img/Observer.png" alt="Diagramme du pattern Observer" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -487,8 +489,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Allows an object to alter its behavior when its internal state changes. The object will appear to change its class (e.g., traffic light).</p>
-                    <img src="../img/State.png" alt="State Pattern Diagram" class="img-fluid"/>
+                    <p>Permet à un objet de modifier son comportement lorsque son état interne change. L'objet semble changer de classe (par exemple, feu de circulation).</p>
+                    <img src="../img/State.png" alt="Diagramme du pattern State" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -505,8 +507,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Lets the algorithm vary independently from clients that use it (e.g., payment strategy).</p>
-                    <img src="../img/Strategy.png" alt="Strategy Pattern Diagram" class="img-fluid"/>
+                    <p>Définit une famille d'algorithmes, encapsule chacun d'eux et les rend interchangeables. Permet à l'algorithme de varier indépendamment des clients qui l'utilisent (par exemple, stratégie de paiement).</p>
+                    <img src="../img/Strategy.png" alt="Diagramme du pattern Strategy" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -523,8 +525,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure (e.g., algorithm variations).</p>
-                    <img src="../img/Template%20Method.png" alt="Template Method Pattern Diagram" class="img-fluid"/>
+                    <p>Définit le squelette d'un algorithme dans une méthode, en reportant certaines étapes aux sous-classes. Permet aux sous-classes de redéfinir certaines étapes d'un algorithme sans modifier la structure de l'algorithme (par exemple, variations d'algorithmes).</p>
+                    <img src="../img/Template%20Method.png" alt="Diagramme du pattern Template Method" class="img-fluid"/>
                 </div>
             </div>
         </div>
@@ -541,12 +543,13 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Represents an operation to be performed on the elements of an object structure. Lets you define a new operation without changing the classes of the elements on which it operates (e.g., shipping cost calculation).</p>
-                    <img src="../img/Visitor.png" alt="Visitor Pattern Diagram" class="img-fluid"/>
+                    <p>Représente une opération à effectuer sur les éléments d'une structure d'objet. Permet de définir une nouvelle opération sans modifier les classes des éléments sur lesquels elle opère (par exemple, calcul des frais d'expédition).</p>
+                    <img src="../img/Visitor.png" alt="Diagramme du pattern Visitor" class="img-fluid"/>
                 </div>
             </div>
         </div>
     </div>
+
 
 </div>
 
