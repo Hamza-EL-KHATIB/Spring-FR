@@ -14,10 +14,6 @@
 <body>
 <header>
     <h1>Concepts de base de Spring Boot</h1>
-    <div id="darkModeToggleWrapper">
-        <input type="checkbox" id="darkModeToggle">
-        <label for="darkModeToggle" class="switch"></label>
-    </div>
 </header>
 
 <div class="container">
@@ -361,33 +357,7 @@
 <footer>
     <p>Diagrammes du Conteneur de Base Spring &copy; 2024</p>
 </footer>
-<script>
-    // Function to toggle dark background
-    function toggleDarkMode() {
-        const body = document.body;
 
-        // Toggle the dark mode class
-        body.classList.toggle('dark-mode');
-
-        // Save the preference in localStorage
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('background', 'dark');
-        } else {
-            localStorage.setItem('background', 'light');
-        }
-    }
-
-    // Event listener for the button
-    document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
-
-    // Apply the saved background preference on page load
-    window.onload = function() {
-        const background = localStorage.getItem('background');
-        if (background === 'dark') {
-            document.body.classList.add('dark-mode');
-        }
-    }
-</script>
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
