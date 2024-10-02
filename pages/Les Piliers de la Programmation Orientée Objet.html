@@ -20,6 +20,18 @@
     <!-- Back Button -->
     <a href="../Homepage.html" class="btn btn-back">Retour à la page d'accueil</a>
 
+    <section class="definition mt-4">
+        <h5>Définitions</h5>
+        <ul>
+            <li><strong>Encapsulation :</strong> Technique qui consiste à cacher les détails internes d'un objet et à ne permettre l'accès qu'à travers des méthodes publiques.</li>
+            <li><strong>Héritage :</strong> Mécanisme par lequel une classe peut hériter des attributs et méthodes d'une autre classe.</li>
+            <li><strong>Abstraction :</strong> Processus de simplification d'un système complexe en ne montrant que les caractéristiques essentielles et en cachant les détails non pertinents.</li>
+            <li><strong>Polymorphisme :</strong> Capacité à utiliser une interface unique pour représenter différentes implémentations d'un objet.</li>
+        </ul>
+    </section>
+
+    <img src="../OOP Pilars/diagram.drawio.png" height="1091" width="1602"/><img src="../img/oop%20pillars.png" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" alt="OOP pillars"/>
+
     <!-- Encapsulation Section -->
     <section class="definition">
         <h3>Encapsulation</h3>
@@ -47,16 +59,6 @@
             <li><strong>Polymorphisme au moment de l'exécution (substitution de méthode) override :</strong> Cela se produit lorsqu'une sous-classe fournit sa propre implémentation d'une méthode héritée de sa superclasse. La méthode réelle à appeler est déterminée au moment de l'exécution en fonction du type réel de l'objet.</li>
         </ul>
     </section>
-
-    <div class="definition">
-        <h5>Définitions</h5>
-        <ul>
-            <li><strong>Encapsulation :</strong> Technique qui consiste à cacher les détails internes d'un objet et à ne permettre l'accès qu'à travers des méthodes publiques.</li>
-            <li><strong>Héritage :</strong> Mécanisme par lequel une classe peut hériter des attributs et méthodes d'une autre classe.</li>
-            <li><strong>Abstraction :</strong> Processus de simplification d'un système complexe en ne montrant que les caractéristiques essentielles et en cachant les détails non pertinents.</li>
-            <li><strong>Polymorphisme :</strong> Capacité à utiliser une interface unique pour représenter différentes implémentations d'un objet.</li>
-        </ul>
-    </div>
 </div>
 
 <footer>
@@ -67,5 +69,10 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+</script>
+
 </body>
 </html>
