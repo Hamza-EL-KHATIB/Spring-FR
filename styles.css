@@ -265,8 +265,8 @@ h1, h2, h3, h4, h5 {
     margin: 10px 0;
 }
 
-/* Custom styles for col-lg-6 mb-4 elements */
-.col-lg-6.mb-4 {
+/* Custom styles for card elements */
+.card {
     background-color: #2a2a3e;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
