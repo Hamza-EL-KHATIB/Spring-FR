@@ -1,10 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes vs Docker vs Jenkins</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+<header>
+    <h1>Kubernetes vs Docker vs Jenkins</h1>
+</header>
 
+<div class="container">
+    <!-- Back Button -->
+    <a href="../Homepage.html" class="btn btn-back">Retour à la page d'accueil</a>
+
+    <section class="definition mt-4">
+        <h3>Introduction</h3>
+        <p>Kubernetes, Docker et Jenkins sont trois outils populaires dans le domaine du développement et de l'exploitation de logiciels. Chacun de ces outils a un rôle spécifique et ils sont souvent utilisés ensemble pour créer des pipelines CI/CD robustes et efficaces.</p>
+    </section>
+
+    <section class="definition mt-4">
+        <h3>Kubernetes</h3>
+        <ul>
+            <li><strong>Orchestration des conteneurs :</strong> Kubernetes est une plateforme open-source conçue pour automatiser le déploiement, la mise à l'échelle et la gestion des applications conteneurisées.</li>
+            <li><strong>Gestion des clusters :</strong> Kubernetes gère des clusters de machines virtuelles ou physiques et orchestre l'exécution des conteneurs sur ces clusters.</li>
+            <li><strong>Fonctionnalités :</strong> Kubernetes offre des fonctionnalités telles que l'équilibrage de charge, la mise à l'échelle automatique, la gestion des configurations et des secrets, et la surveillance des applications.</li>
+        </ul>
+    </section>
+
+    <section class="definition mt-4">
+        <h3>Docker</h3>
+        <ul>
+            <li><strong>Conteneurisation :</strong> Docker est une plateforme de conteneurisation qui permet aux développeurs de créer, déployer et exécuter des applications dans des conteneurs.</li>
+            <li><strong>Isolation :</strong> Les conteneurs Docker offrent une isolation des processus, des systèmes de fichiers et des réseaux, ce qui permet de garantir que les applications fonctionnent de manière cohérente sur différents environnements.</li>
+            <li><strong>Images Docker :</strong> Docker utilise des images pour créer des conteneurs. Les images sont des instantanés des applications et de leurs dépendances, ce qui facilite le déploiement et la mise à jour des applications.</li>
+        </ul>
+    </section>
+
+    <section class="definition mt-4">
+        <h3>Jenkins</h3>
+        <ul>
+            <li><strong>Intégration continue :</strong> Jenkins est un serveur d'intégration continue open-source qui permet d'automatiser le processus de construction, de test et de déploiement des applications.</li>
+            <li><strong>Plugins :</strong> Jenkins dispose d'une vaste bibliothèque de plugins qui permettent d'intégrer divers outils et technologies dans le pipeline CI/CD.</li>
+            <li><strong>Pipeline as Code :</strong> Jenkins permet de définir des pipelines CI/CD en utilisant des fichiers de configuration, ce qui facilite la gestion et la version des pipelines.</li>
+        </ul>
+    </section>
+
+    <section class="definition mt-4">
+        <h3>Comparaison</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Caractéristique</th>
+                    <th>Kubernetes</th>
+                    <th>Docker</th>
+                    <th>Jenkins</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rôle principal</td>
+                    <td>Orchestration des conteneurs</td>
+                    <td>Conteneurisation</td>
+                    <td>Intégration continue</td>
+                </tr>
+                <tr>
+                    <td>Fonctionnalités clés</td>
+                    <td>Mise à l'échelle automatique, gestion des clusters</td>
+                    <td>Isolation, images Docker</td>
+                    <td>Automatisation des builds, tests et déploiements</td>
+                </tr>
+                <tr>
+                    <td>Utilisation</td>
+                    <td>Gestion des applications conteneurisées</td>
+                    <td>Création et exécution de conteneurs</td>
+                    <td>Automatisation des pipelines CI/CD</td>
+                </tr>
+                <tr>
+                    <td>Écosystème</td>
+                    <td>Open-source, supporté par CNCF</td>
+                    <td>Open-source, supporté par Docker Inc.</td>
+                    <td>Open-source, supporté par la communauté Jenkins</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="definition mt-4">
+        <h3>Conclusion</h3>
+        <p>Kubernetes, Docker et Jenkins sont des outils complémentaires qui jouent des rôles distincts dans le cycle de vie du développement logiciel. Docker est utilisé pour la conteneurisation des applications, Kubernetes pour l'orchestration des conteneurs, et Jenkins pour l'automatisation des pipelines CI/CD. Ensemble, ils forment une chaîne d'outils puissante pour le développement et l'exploitation de logiciels modernes.</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Ressources Spring Framework</p>
+    <div class="navigation-buttons">
+        <a class="btn btn-primary btn-custom" href="PreviousPage.html">Previous Page</a>
+        <a class="btn btn-primary btn-custom" href="NextPage.html">Next Page</a>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
