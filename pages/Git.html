@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+<header>
+    <h1>Git</h1>
+</header>
 
+<div class="container">
+    <!-- Back Button -->
+    <a href="../Homepage.html" class="btn btn-back">Retour à la page d'accueil</a>
+
+    <section class="definition mt-4">
+        <h3>Introduction</h3>
+        <p>Git est un système de contrôle de version distribué, utilisé pour suivre les modifications apportées aux fichiers et coordonner le travail sur ces fichiers entre plusieurs personnes. Il a été créé par Linus Torvalds en 2005 pour le développement du noyau Linux.</p>
+    </section>
+
+    <section class="definition mt-4">
+        <h3>Fonctionnalités Clés</h3>
+        <ul>
+            <li><strong>Branches :</strong> Git permet de créer des branches pour travailler sur des fonctionnalités ou des correctifs de manière isolée. Les branches peuvent être fusionnées une fois le travail terminé.</li>
+            <li><strong>Commits :</strong> Les commits sont des instantanés des modifications apportées aux fichiers. Chaque commit a un identifiant unique et un message descriptif.</li>
+            <li><strong>Référentiels :</strong> Un référentiel (ou repo) est un dossier contenant tous les fichiers et l'historique des modifications. Les référentiels peuvent être locaux ou distants.</li>
+            <li><strong>Fusion :</strong> La fusion (merge) permet de combiner les modifications de différentes branches.</li>
+            <li><strong>Rebase :</strong> Le rebase permet de réappliquer les commits d'une branche sur une autre base, créant ainsi une histoire linéaire.</li>
+        </ul>
+    </section>
+
+    <section class="definition mt-4">
+        <h3>Commandes Git de Base</h3>
+        <ul>
+            <li><strong>git init :</strong> Initialise un nouveau référentiel Git.</li>
+            <li><strong>git clone :</strong> Clone un référentiel distant.</li>
+            <li><strong>git add :</strong> Ajoute des fichiers à l'index (staging area).</li>
+            <li><strong>git commit :</strong> Enregistre les modifications dans l'historique.</li>
+            <li><strong>git status :</strong> Affiche l'état des fichiers dans le répertoire de travail et l'index.</li>
+            <li><strong>git log :</strong> Affiche l'historique des commits.</li>
+            <li><strong>git branch :</strong> Liste, crée ou supprime des branches.</li>
+            <li><strong>git checkout :</strong> Change de branche ou restaure des fichiers.</li>
+            <li><strong>git merge :</strong> Fusionne des branches.</li>
+            <li><strong>git rebase :</strong> Réapplique les commits d'une branche sur une autre base.</li>
+            <li><strong>git pull :</strong> Récupère et fusionne les modifications d'un référentiel distant.</li>
+            <li><strong>git push :</strong> Envoie les modifications locales vers un référentiel distant.</li>
+        </ul>
+    </section>
+
+    <section class="definition mt-4">
+        <h3>Bonnes Pratiques</h3>
+        <ul>
+            <li><strong>Commits Atomiques :</strong> Faites des commits atomiques, c'est-à-dire des commits qui représentent une seule modification logique.</li>
+            <li><strong>Messages de Commit Clairs :</strong> Rédigez des messages de commit clairs et descriptifs.</li>
+            <li><strong>Branches Thématiques :</strong> Utilisez des branches thématiques pour travailler sur des fonctionnalités ou des correctifs spécifiques.</li>
+            <li><strong>Revue de Code :</strong> Effectuez des revues de code avant de fusionner des branches.</li>
+            <li><strong>Tests :</strong> Testez les modifications avant de les valider.</li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Ressources Spring Framework</p>
+</footer>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
