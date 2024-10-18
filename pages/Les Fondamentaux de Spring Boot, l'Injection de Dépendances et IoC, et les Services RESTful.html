@@ -268,11 +268,26 @@
 
 <footer>
     &copy; 2024 Votre Société
+    <div class="navigation-buttons">
+        <a class="btn btn-primary btn-custom" href="PreviousPage.html">Previous Page</a>
+        <a class="btn btn-primary btn-custom" href="NextPage.html">Next Page</a>
+    </div>
 </footer>
 
 <!-- Bootstrap JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Smooth Scroll JavaScript -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 </body>
 </html>

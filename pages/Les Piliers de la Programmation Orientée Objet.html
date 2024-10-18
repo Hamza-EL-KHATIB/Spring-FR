@@ -30,7 +30,9 @@
         </ul>
     </section>
 
-    <img src="../img/oop%20pillars.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" alt="OOP pillars"/>
+    <div class="image-container" style="background-color: #333; padding: 10px; border-radius: 8px;">
+        <img src="../img/oop%20pillars.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" alt="OOP pillars"/>
+    </div>
 
     <!-- Encapsulation Section -->
     <section class="definition">
@@ -63,16 +65,26 @@
 
 <footer>
     <p>&copy; 2024 Votre Nom ou Organisation</p>
+    <div class="navigation-buttons">
+        <a class="btn btn-primary btn-custom" href="PreviousPage.html">Previous Page</a>
+        <a class="btn btn-primary btn-custom" href="NextPage.html">Next Page</a>
+    </div>
 </footer>
 
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
+<!-- Smooth Scroll JavaScript -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 </script>
-
 </body>
 </html>

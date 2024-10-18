@@ -169,7 +169,7 @@
 
     <!-- General Overview Diagram -->
     <h2>Vue d'ensemble générale</h2>
-    <div class="definition">
+    <div class="definition" style="background-color: #333; color: #fff;">
         <h5>Définitions</h5>
         <ul>
             <li><strong>BeanFactory:</strong> Interface pour accéder aux beans avec des fonctionnalités de base.</li>
@@ -185,15 +185,15 @@
             <li><strong>Scopes des Beans Spring:</strong> Définit le cycle de vie et la visibilité des beans (Singleton, Prototype, Request, Session).</li>
         </ul>
     </div>
-    <div class="mermaid">
+    <div class="mermaid" style="background-color: #333; padding: 10px;">
         %%{init: {"theme": "base", "themeVariables": {
         "primaryColor": "#007bff",
         "secondaryColor": "#28a745",
         "tertiaryColor": "#ffc107",
-        "primaryTextColor": "#333",
+        "primaryTextColor": "#fff",
         "lineColor": "#343a40",
         "edgeLabelBackground": "#f0f4f8",
-        "tertiaryTextColor": "#333",
+        "tertiaryTextColor": "#fff",
         "nodePadding": "15px", /* Increase padding */
         "nodeBorderRadius": "10px", /* Rounded corners for nodes */
         "fontFamily": "'Roboto', sans-serif", /* Clear font */
@@ -233,7 +233,7 @@
     <!-- Detailed Diagrams -->
     <h2>Diagrammes détaillés</h2>
     <!-- Bean Lifecycle Diagram -->
-    <div class="definition">
+    <div class="definition" style="background-color: #333; color: #fff;">
         <h5>Cycle de Vie des Beans</h5>
         <ul>
             <li><strong>Création du Bean:</strong> Création initiale de l'instance du bean.</li>
@@ -242,15 +242,15 @@
             <li><strong>Destruction:</strong> Nettoyage avant la destruction du bean.</li>
         </ul>
     </div>
-    <div class="mermaid">
+    <div class="mermaid" style="background-color: #333; padding: 10px;">
         %%{init: {"theme": "base", "themeVariables": {
         "primaryColor": "#007bff",
         "secondaryColor": "#28a745",
         "tertiaryColor": "#ffc107",
-        "primaryTextColor": "#333",
+        "primaryTextColor": "#fff",
         "lineColor": "#343a40",
         "edgeLabelBackground": "#f0f4f8",
-        "tertiaryTextColor": "#333",
+        "tertiaryTextColor": "#fff",
         "nodePadding": "15px", /* Increase padding */
         "nodeBorderRadius": "10px", /* Rounded corners for nodes */
         "fontFamily": "'Roboto', sans-serif", /* Clear font */
@@ -268,7 +268,7 @@
         BeanPostProcessor -->|Modifications avant utilisation| Destruction
     </div>
     <!-- Scope Types Diagram -->
-    <div class="definition">
+    <div class="definition" style="background-color: #333; color: #fff;">
         <h5>Spring Bean Scopes (Portées des Beans Spring)</h5>
         <ul>
             <li><strong>Singleton :</strong> Une seule instance du bean est créée pour l'ensemble du conteneur Spring.</li>
@@ -277,15 +277,15 @@
             <li><strong>Session :</strong> Une nouvelle instance est créée pour chaque session HTTP.</li>
         </ul>
     </div>
-    <div class="mermaid">
+    <div class="mermaid" style="background-color: #333; padding: 10px;">
         %%{init: {"theme": "base", "themeVariables": {
         "primaryColor": "#007bff",
         "secondaryColor": "#28a745",
         "tertiaryColor": "#ffc107",
-        "primaryTextColor": "#333",
+        "primaryTextColor": "#fff",
         "lineColor": "#343a40",
         "edgeLabelBackground": "#f0f4f8",
-        "tertiaryTextColor": "#333",
+        "tertiaryTextColor": "#fff",
         "nodePadding": "15px", /* Increase padding */
         "nodeBorderRadius": "10px", /* Rounded corners for nodes */
         "fontFamily": "'Roboto', sans-serif", /* Clear font */
@@ -305,7 +305,7 @@
     </div>
 
     <h2>Composants Supplémentaires</h2>
-    <div class="definition">
+    <div class="definition" style="background-color: #333; color: #fff;">
         <h5>Définitions</h5>
         <ul>
             <li><strong>ApplicationEventPublisher :</strong> Interface pour publier des événements aux beans qui sont intéressés.</li>
@@ -317,15 +317,15 @@
             <li><strong>AnnotationConfigApplicationContext :</strong> Une sous-classe de ApplicationContext qui permet la configuration à l'aide d'annotations.</li>
         </ul>
     </div>
-    <div class="mermaid">
+    <div class="mermaid" style="background-color: #333; padding: 10px;">
         %%{init: {"theme": "base", "themeVariables": {
         "primaryColor": "#007bff",
         "secondaryColor": "#28a745",
         "tertiaryColor": "#ffc107",
-        "primaryTextColor": "#333",
+        "primaryTextColor": "#fff",
         "lineColor": "#343a40",
         "edgeLabelBackground": "#f0f4f8",
-        "tertiaryTextColor": "#333",
+        "tertiaryTextColor": "#fff",
         "nodePadding": "15px",
         "nodeBorderRadius": "10px",
         "fontFamily": "'Roboto', sans-serif",
@@ -366,6 +366,17 @@
 <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
     mermaid.initialize({startOnLoad:true});
+</script>
+<!-- Smooth Scroll JavaScript -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 </script>
 </body>
 </html>

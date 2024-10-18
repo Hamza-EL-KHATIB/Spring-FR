@@ -9,125 +9,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/icon.png">
-
-
     <!-- Custom CSS -->
-    <style>
-        body {
-            background-color: #f0f2f5;
-            color: #333;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        header {
-            background: linear-gradient(135deg, #6e45e2, #88d3ce);
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .buttons-section {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .buttons-section .btn-custom {
-            margin: 5px;
-        }
-
-        footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            margin-top: 30px;
-            max-width: 1200px;
-        }
-
-        .definition, .info-section {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin: 10px 0;
-        }
-
-        .definition h5, .info-section h3 {
-            color: #6e45e2;
-        }
-
-        .definition h5 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .info-section img {
-            width: 100%;
-            max-width: 1000px; /* Increased size for better visibility */
-            height: auto; /* Maintain aspect ratio */
-            margin-top: 15px;
-            border-radius: 8px;
-        }
-
-        .info-section code, .info-section pre {
-            background-color: #f8f9fa;
-            border-radius: 4px;
-            padding: 4px 8px;
-            font-size: 0.875rem;
-        }
-
-        .info-section pre {
-            padding: 15px;
-            overflow-x: auto;
-        }
-
-        .btn-custom {
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 15px 30px;
-            margin: 10px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .btn-primary {
-            background-color: #3f51b5;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #283593;
-        }
-
-        .btn-secondary {
-            background-color: #ff4081;
-            border: none;
-        }
-
-        .btn-secondary:hover {
-            background-color: #f50057;
-        }
-
-        .btn-info {
-            background-color: #9c27b0;
-            border: none;
-        }
-
-        .btn-info:hover {
-            background-color: #7b1fa2;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
@@ -136,51 +19,36 @@
 </header>
 
 <!-- Buttons Section -->
-<div class="buttons-section">
-    <a class="btn btn-info btn-custom" href="pages/Les Piliers de la Programmation Orientée Objet.html">Les
-        Piliers de la
-        Programmation Orientée Objet</a>
-    <a class="btn btn-secondary btn-custom" href="pages/SOLID & Modèles de Conception.html">SOLID & Modèles de
-        Conception</a>
-    <a class="btn btn-info btn-custom" href="pages/Concepts de base de Spring Boot.html">Concepts de base de
-        Spring Boot</a>
-    <a class="btn btn-primary btn-custom"
-       href="pages/Les Fondamentaux de Spring Boot, l'Injection de Dépendances et IoC, et les Services RESTful.html">Les
-        Fondamentaux de Spring Boot, l'Injection de Dépendances et IoC, et les Services RESTful</a>
-    <a class="btn btn-info btn-custom" href="pages/Transactions.html">Transactions</a>
-    <a class="btn btn-info btn-custom" href="pages/Git.html">Git</a>
-    <a class="btn btn-info btn-custom" href="pages/Hibernate.html">Hibernate</a>
-    <a class="btn btn-info btn-custom" href="pages/Améliorer les Performances des API.html">Améliorer les
-        Performances des
-        API</a>
-    <a class="btn btn-info btn-custom" href="pages/Kubernetes vs Docker vs Jenkins.html">Kubernetes vs Docker vs
-        Jenkins</a>
-    <a class="btn btn-info btn-custom" href="pages/Questions d'Entretien de Jose.html">Questions d'Entretien de
-        Jose</a>
-    <a class="btn btn-success btn-custom" href="pages/FAQs.html">FAQs</a>
+<div class="buttons-section text-center">
+    <a class="btn btn-primary btn-custom" href="pages/Les Piliers de la Programmation Orientée Objet.html">Les Piliers de la Programmation Orientée Objet</a>
+    <a class="btn btn-primary btn-custom" href="pages/SOLID & Modèles de Conception.html">SOLID & Modèles de Conception</a>
+    <a class="btn btn-primary btn-custom" href="pages/Concepts de base de Spring Boot.html">Concepts de base de Spring Boot</a>
+    <a class="btn btn-primary btn-custom" href="pages/Les Fondamentaux de Spring Boot, l'Injection de Dépendances et IoC, et les Services RESTful.html">Les Fondamentaux de Spring Boot, l'Injection de Dépendances et IoC, et les Services RESTful</a>
+    <a class="btn btn-primary btn-custom" href="pages/Transactions.html">Transactions</a>
+    <a class="btn btn-primary btn-custom" href="pages/Git.html">Git</a>
+    <a class="btn btn-primary btn-custom" href="pages/Hibernate.html">Hibernate</a>
+    <a class="btn btn-primary btn-custom" href="pages/Améliorer les Performances des API.html">Améliorer les Performances des API</a>
+    <a class="btn btn-primary btn-custom" href="pages/Kubernetes vs Docker vs Jenkins.html">Kubernetes vs Docker vs Jenkins</a>
+    <a class="btn btn-primary btn-custom" href="pages/Questions d'Entretien de Jose.html">Questions d'Entretien de Jose</a>
+    <a class="btn btn-primary btn-custom" href="pages/FAQs.html">FAQs</a>
 </div>
 
 <div class="container">
     <!-- General Info Sections -->
     <div class="info-section">
         <h3>JAVA</h3>
-        <p>Java est un langage de programmation de haut niveau, basé sur les classes, orienté objet, conçu pour avoir le
-            moins de dépendances d'implémentation possible.</p>
+        <p>Java est un langage de programmation de haut niveau, basé sur les classes, orienté objet, conçu pour avoir le moins de dépendances d'implémentation possible.</p>
     </div>
 
     <div class="info-section">
         <h3>Microservices</h3>
-        <p>Les microservices, également connus sous le nom d'architecture microservices, sont un style architectural qui
-            structure une application comme une collection de services.</p>
-        <p>L'architecture microservices permet une livraison rapide, fréquente et fiable de grandes applications
-            complexes. Elle permet également à une organisation d'évoluer dans sa pile technologique.</p>
+        <p>Les microservices, également connus sous le nom d'architecture microservices, sont un style architectural qui structure une application comme une collection de services.</p>
+        <p>L'architecture microservices permet une livraison rapide, fréquente et fiable de grandes applications complexes. Elle permet également à une organisation d'évoluer dans sa pile technologique.</p>
     </div>
 
     <div class="info-section">
         <h3>Hexagonal Architecture</h3>
-        <p>L'idée principale de l'architecture hexagonale est d'avoir une séparation claire de la logique via le
-            principe de séparation des interfaces. De plus, l'architecture hexagonale crée des applications faiblement
-            couplées grâce au concept de <i>ports et adaptateurs</i>.</p>
+        <p>L'idée principale de l'architecture hexagonale est d'avoir une séparation claire de la logique via le principe de séparation des interfaces. De plus, l'architecture hexagonale crée des applications faiblement couplées grâce au concept de <i>ports et adaptateurs</i>.</p>
         <p>Les ports se réfèrent à l'interface et les adaptateurs se réfèrent à sa classe d'implémentation.</p>
         <img src="img/Hexagonal Architecture.png" alt="Hexagonal Architecture"/>
         <p class="text-center">Figure 1: Architecture Hexagonale</p>
@@ -188,61 +56,48 @@
 
     <div class="info-section">
         <h3>Types de Récupération (Fetch Types)</h3>
-        <p><strong>EAGER</strong>: Ce type de récupération signifie que les données associées sont chargées
-            immédiatement avec l'entité parent. Cela peut entraîner des chargements plus lourds si de grandes
-            collections sont récupérées de cette manière. Voici des exemples :</p>
+        <p><strong>EAGER</strong>: Ce type de récupération signifie que les données associées sont chargées immédiatement avec l'entité parent. Cela peut entraîner des chargements plus lourds si de grandes collections sont récupérées de cette manière. Voici des exemples :</p>
         <ul>
-            <li><strong>OneToOne</strong>: L'entité associée est récupérée lors de la requête initiale. Par exemple, si
-                une <code>Personne</code> a une <code>Adresse</code> associée, l'<code>Adresse</code> sera chargée avec
-                la <code>Personne</code>.
-            </li>
-            <li><strong>ManyToOne</strong>: De manière similaire à <code>OneToOne</code>, l'entité associée est chargée
-                avec l'entité parent. Par exemple, si plusieurs <code>Commandes</code> sont associées à un
-                <code>Client</code>, les données du <code>Client</code> seront chargées avec chaque
-                <code>Commande</code>.
-            </li>
+            <li><strong>OneToOne</strong>: L'entité associée est récupérée lors de la requête initiale. Par exemple, si une <code>Personne</code> a une <code>Adresse</code> associée, l'<code>Adresse</code> sera chargée avec la <code>Personne</code>.</li>
+            <li><strong>ManyToOne</strong>: De manière similaire à <code>OneToOne</code>, l'entité associée est chargée avec l'entité parent. Par exemple, si plusieurs <code>Commandes</code> sont associées à un <code>Client</code>, les données du <code>Client</code> seront chargées avec chaque <code>Commande</code>.</li>
         </ul>
 
-        <p><strong>LAZY</strong>: Ce type de récupération retarde le chargement des données associées jusqu'à ce
-            qu'elles soient réellement nécessaires. Cela peut améliorer les performances en chargeant uniquement ce qui
-            est requis. Voici des exemples :</p>
+        <p><strong>LAZY</strong>: Ce type de récupération retarde le chargement des données associées jusqu'à ce qu'elles soient réellement nécessaires. Cela peut améliorer les performances en chargeant uniquement ce qui est requis. Voici des exemples :</p>
         <ul>
-            <li><strong>OneToMany</strong>: La collection associée n'est pas chargée immédiatement. Par exemple, un
-                <code>Département</code> peut avoir plusieurs <code>Employés</code>, mais les <code>Employés</code> ne
-                sont récupérés que lorsqu'ils sont accédés.
-            </li>
-            <li><strong>ManyToMany</strong>: De manière similaire à <code>OneToMany</code>, la collection des entités
-                associées est chargée à la demande. Par exemple, si des <code>Étudiants</code> sont associés à plusieurs
-                <code>Cours</code>, les <code>Cours</code> ne sont chargés que lorsqu'ils sont nécessaires.
-            </li>
+            <li><strong>OneToMany</strong>: La collection associée n'est pas chargée immédiatement. Par exemple, un <code>Département</code> peut avoir plusieurs <code>Employés</code>, mais les <code>Employés</code> ne sont récupérés que lorsqu'ils sont accédés.</li>
+            <li><strong>ManyToMany</strong>: De manière similaire à <code>OneToMany</code>, la collection des entités associées est chargée à la demande. Par exemple, si des <code>Étudiants</code> sont associés à plusieurs <code>Cours</code>, les <code>Cours</code> ne sont chargés que lorsqu'ils sont nécessaires.</li>
         </ul>
 
-        <p>Comprendre ces types de récupération est crucial pour gérer efficacement les performances et l'utilisation
-            des ressources. Par exemple, utiliser la récupération <code>EAGER</code> pour de grandes collections peut
-            entraîner des problèmes de performance, tandis que la récupération <code>LAZY</code> peut provoquer une
-            <code>LazyInitializationException</code> si les données sont accédées en dehors du contexte de transaction.
-        </p>
+        <p>Comprendre ces types de récupération est crucial pour gérer efficacement les performances et l'utilisation des ressources. Par exemple, utiliser la récupération <code>EAGER</code> pour de grandes collections peut entraîner des problèmes de performance, tandis que la récupération <code>LAZY</code> peut provoquer une <code>LazyInitializationException</code> si les données sont accédées en dehors du contexte de transaction.</p>
 
-        <p>Je peux également considérer la performance et l'utilisation de la mémoire. Une grande différence est que la
-            stratégie de récupération <strong>EAGER</strong> permet d'utiliser l'objet de données récupéré sans session.
-            Pourquoi ?</p>
-        <p>Toutes les données sont récupérées lorsque les données marquées comme <code>EAGER</code> sont dans l'objet
-            lorsque la session est connectée. Cependant, en cas de stratégie de chargement paresseux
-            (<strong>LAZY</strong>), l'objet marqué comme paresseux ne récupère pas les données si la session est
-            déconnectée (après l'instruction <code>session.close()</code>).</p>
-        <p>Tout cela peut être réalisé par le biais des proxys Hibernate. La stratégie <code>EAGER</code> permet aux
-            données de rester disponibles après la fermeture de la session.</p>
+        <p>Je peux également considérer la performance et l'utilisation de la mémoire. Une grande différence est que la stratégie de récupération <strong>EAGER</strong> permet d'utiliser l'objet de données récupéré sans session. Pourquoi ?</p>
+        <p>Toutes les données sont récupérées lorsque les données marquées comme <code>EAGER</code> sont dans l'objet lorsque la session est connectée. Cependant, en cas de stratégie de chargement paresseux (<strong>LAZY</strong>), l'objet marqué comme paresseux ne récupère pas les données si la session est déconnectée (après l'instruction <code>session.close()</code>).</p>
+        <p>Tout cela peut être réalisé par le biais des proxys Hibernate. La stratégie <code>EAGER</code> permet aux données de rester disponibles après la fermeture de la session.</p>
     </div>
-
 </div>
 
 <footer>
     <p>&copy; 2024 Ressources Spring Framework</p>
+    <div class="navigation-buttons">
+        <a class="btn btn-primary btn-custom" href="pages/PreviousPage.html">Previous Page</a>
+        <a class="btn btn-primary btn-custom" href="pages/NextPage.html">Next Page</a>
+    </div>
 </footer>
 
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Smooth Scroll JavaScript -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 </body>
 </html>
