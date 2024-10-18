@@ -122,11 +122,11 @@ h4 {
 }
 
 h5 {
-    color: #004d00; /* Dark green for visibility */
+    color: #ff0080; /* Retrowave theme color */
     font-weight: 600; /* Slightly bold for emphasis */
-    background-color: #e8f5e9; /* Light green background */
+    background-color: #2a2a3e; /* Retrowave theme background */
     padding: 10px; /* Add padding */
-    border-left: 4px solid #004d00; /* Left border for added emphasis */
+    border-left: 4px solid #ff0080; /* Left border for added emphasis */
     margin-top: 20px; /* Add margin for spacing */
     margin-bottom: 10px; /* Add margin for spacing */
 }
