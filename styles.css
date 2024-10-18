@@ -191,3 +191,23 @@ html {
     font-size: 0.9rem;
     margin-top: 10px;
 }
+
+/* Centering buttons */
+.buttons-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Consistent button colors */
+.btn-custom {
+    background-color: #6e45e2;
+    color: #fff;
+}
+
+/* Smooth navigation styles */
+a[href^="#"] {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
