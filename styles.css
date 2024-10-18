@@ -183,6 +183,7 @@ html {
     height: auto;
     border-radius: 8px;
     margin: 20px 0;
+    background-color: rgba(42, 42, 62, 0.8); /* Add background behind images */
 }
 
 .info-section .text-center {
