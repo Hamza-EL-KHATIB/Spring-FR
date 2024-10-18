@@ -1,13 +1,13 @@
 /* styles.css */
 body {
-    background-color: #f0f2f5;
-    color: #333;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
     font-family: 'Roboto', sans-serif;
 }
 
 /* Header styles */
 header {
-    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    background: linear-gradient(135deg, #ff0080, #ff8c00, #ff0080);
     color: #fff;
     padding: 40px 20px;
     text-align: center;
@@ -22,7 +22,7 @@ header h1 {
 
 /* Footer styles */
 footer {
-    background-color: #343a40;
+    background-color: #0f0f1f;
     color: #fff;
     padding: 20px;
     text-align: center;
