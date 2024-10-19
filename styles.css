@@ -283,3 +283,24 @@ h1, h2, h3, h4, h5 {
     padding: 20px;
     margin: 10px 0;
 }
+
+/* P8333 */
+.code-section {
+    background-color: #2a2a3e;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* Pfd0f */
+.table {
+    color: #e0e0e0;
+}
+
+/* Pb4b4 */
+.code-section {
+    width: auto;
+    max-width: 100%;
+}
